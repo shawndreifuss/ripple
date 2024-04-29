@@ -10,7 +10,7 @@ type Props = {
 }
 
 
-const Navigation = () => {
+const Navigation = ({ user } : Props  ) => {
   return (
     
     <div className="fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10">
