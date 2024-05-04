@@ -54,11 +54,13 @@ const SendInvitation: React.FC<SendInvitationProps> = ({ agencyId }) => {
   const onSubmit = async (values: z.infer<typeof userDataSchema>) => {
     try {
       const res = await sendInvitation(values.role, values.email, agencyId)
+      console.log('res' , res)
       await saveActivityLogsNotification({
         agencyId: agencyId,
-        description: `Invited ${res.email}`,
+        description: `Invited ${values.email}`,
         subaccountId: undefined,
       })
+      console.log('res' , res)
       toast({
         title: 'Success',
         description: 'Created and sent invitation',

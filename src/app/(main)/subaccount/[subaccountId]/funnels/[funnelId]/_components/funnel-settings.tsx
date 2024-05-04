@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Funnel, SubAccount } from '@prisma/client'
 import { db } from '@/lib/db'
-// import { getConnectAccountProducts } from '@/lib/stripe/stripe-actions'
+import { getConnectAccountProducts } from '@/lib/stripe/stripe-actions'
 
 
 import FunnelForm from '@/components/forms/funnel-form'
@@ -33,10 +33,10 @@ const FunnelSettings: React.FC<FunnelSettingsProps> = async ({
   })
 
   if (!subaccountDetails) return
-  // if (!subaccountDetails.connectAccountId) return
-  // const products = await getConnectAccountProducts(
-  //   subaccountDetails.connectAccountId
-  // )
+  if (!subaccountDetails.connectAccountId) return
+  const products = await getConnectAccountProducts(
+    subaccountDetails.connectAccountId
+  )
 
   return (
     <div className="flex gap-4 flex-col xl:!flex-row">
@@ -49,16 +49,16 @@ const FunnelSettings: React.FC<FunnelSettingsProps> = async ({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {/* <>
+          <>
             {subaccountDetails.connectAccountId ? (
               <FunnelProductsTable
                 defaultData={defaultData}
-                 products={products}
+                products={products}
               />
             ) : (
               'Connect your stripe account to sell products.'
             )}
-          </> */}
+          </>
         </CardContent>
       </Card>
 
