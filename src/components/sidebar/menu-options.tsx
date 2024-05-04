@@ -269,7 +269,6 @@ const MenuOptions = ({
                 <CommandGroup className="overflow-hidden ">
                   {sidebarOpt.map((sidebarOptions) => {
                     let val
-                    console.log(sidebarOptions)
                     const result = icons.find(
                       (icon) => icon.value === sidebarOptions.icon
                     )

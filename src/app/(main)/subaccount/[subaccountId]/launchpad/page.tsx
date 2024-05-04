@@ -8,8 +8,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { db } from '@/lib/db'
-// import { stripe } from '@/lib/stripe'
-// import { getStripeOAuthLink } from '@/lib/utils'
+import { stripe } from '@/lib/stripe'
+import { getStripeOAuthLink } from '@/lib/utils'
 import { CheckCircleIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -44,30 +44,30 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
     subaccountDetails.name &&
     subaccountDetails.state
 
-//   const stripeOAuthLink = getStripeOAuthLink(
-//     'subaccount',
-//     `launchpad___${subaccountDetails.id}`
-//   )
+  const stripeOAuthLink = getStripeOAuthLink(
+    'subaccount',
+    `launchpad___${subaccountDetails.id}`
+  )
 
-//   let connectedStripeAccount = false
+  let connectedStripeAccount = false
 
-//   if (searchParams.code) {
-//     if (!subaccountDetails.connectAccountId) {
-//       try {
-//         const response = await stripe.oauth.token({
-//           grant_type: 'authorization_code',
-//           code: searchParams.code,
-//         })
-//         await db.subAccount.update({
-//           where: { id: params.subaccountId },
-//           data: { connectAccountId: response.stripe_user_id },
-//         })
-//         connectedStripeAccount = true
-//       } catch (error) {
-//         console.log('🔴 Could not connect stripe account', error)
-//       }
-//     }
-//   }
+  if (searchParams.code) {
+    if (!subaccountDetails.connectAccountId) {
+      try {
+        const response = await stripe.oauth.token({
+          grant_type: 'authorization_code',
+          code: searchParams.code,
+        })
+        await db.subAccount.update({
+          where: { id: params.subaccountId },
+          data: { connectAccountId: response.stripe_user_id },
+        })
+        connectedStripeAccount = true
+      } catch (error) {
+        console.log('🔴 Could not connect stripe account', error)
+      }
+    }
+  }
 
   return (
     <BlurPage>
@@ -108,7 +108,7 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
                     used to run payouts.
                   </p>
                 </div>
-                {/* {subaccountDetails.connectAccountId ||
+                {subaccountDetails.connectAccountId ||
                 connectedStripeAccount ? (
                   <CheckCircleIcon
                     size={50}
@@ -122,7 +122,7 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
                   >
                     Start
                   </Link>
-                )} */}
+                )}
               </div>
               <div className="flex justify-between items-center w-full h-20 border p-4 rounded-lg">
                 <div className="flex items-center gap-4">
