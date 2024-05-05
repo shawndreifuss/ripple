@@ -70,7 +70,7 @@ const MenuOptions = ({
     >
       <SheetTrigger
         asChild
-        className="absolute left-4 top-4 z-[100] md:!hidden felx"
+        className="absolute right-4 top-4 z-[100] md:!hidden flex"
       >
         <Button
           variant="outline"
@@ -106,7 +106,7 @@ const MenuOptions = ({
                 className="w-full my-4 flex items-center justify-between py-8"
                 variant="ghost"
               >
-                <div className="flex items-center text-left gap-2">
+                <div className="flex items-center text-left gap-3">
                   <Compass />
                   <div className="flex flex-col">
                     {details.name}
@@ -118,7 +118,7 @@ const MenuOptions = ({
                 <div>
                   <ChevronsUpDown
                     size={16}
-                    className="text-muted-foreground"
+                    className="text-muted-foreground mt-[-1.5rem] ml-[-1rem]"
                   />
                 </div>
               </Button>
@@ -132,7 +132,7 @@ const MenuOptions = ({
                     user?.role === 'AGENCY_ADMIN') &&
                     user?.Agency && (
                       <CommandGroup heading="Agency">
-                        <CommandItem className="!bg-transparent my-2 text-primary broder-[1px] border-border p-2 rounded-md hover:!bg-muted cursor-pointer transition-all">
+                        <CommandItem className="!bg-transparent my-2 text-primary border-[1px] border-border p-2 rounded-md hover:!bg-muted cursor-pointer transition-all">
                           {defaultOpen ? (
                             <Link
                               href={`/agency/${user?.Agency?.id}`}

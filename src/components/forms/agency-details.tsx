@@ -367,7 +367,7 @@ const AgencyDetails = ({ data }: Props) => {
                   name="zipCode"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Zipcpde</FormLabel>
+                      <FormLabel>Zipcode</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Zipcode"
