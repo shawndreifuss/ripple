@@ -1,9 +1,15 @@
 "use client";
-import { Blog } from "@/types/blog";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Blog from ".";
 
+type Blog = {
+  mainImage: string;
+  title: string;
+  metadata: string;
+};
 const BlogItem = ({ blog }: { blog: Blog }) => {
   const { mainImage, title, metadata } = blog;
 
