@@ -177,7 +177,7 @@ const Pricing = async () => {
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
                   {card.features.map((feature) => (
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee flex gap-2">
+                  <li key={feature}className="mb-4 text-black last:mb-0 dark:text-manatee flex gap-2">
                     <Check />
                     {feature}
                   </li>

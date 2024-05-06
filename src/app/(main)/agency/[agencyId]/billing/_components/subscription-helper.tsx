@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
 type Props = {
-  prices: PricesList['data']
+  prices?: PricesList['data']
   customerId: string
   planExists: boolean
 }
