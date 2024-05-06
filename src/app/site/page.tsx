@@ -28,7 +28,7 @@ import Contact from './_components/Contact'
 import Blog from './_components/Blog'
 import Footer from './_components/Footer'
 import Lines from './_components/Lines'
-
+import { getAuthUserDetails } from '@/lib/queries'
 
 
 
@@ -36,7 +36,10 @@ export default async function Home() {
   const prices = await stripe.prices.list({
     product: process.env.NEXT_PLURA_PRODUCT_ID,
     active: true,
-  })
+  }) 
+
+  const user = await getAuthUserDetails()
+  console.log(user)
 
   return (
     <main>

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,15 +9,15 @@ import { User } from '@clerk/nextjs/server'
 import menuData from "./menuData";
 import DarkModeSwitcher from "../Toggle/DarkModeSwitcher";
 
+
 type Props = {
-  user?: null | User
+  user?: User | null;
 }
 
-const Header = ({ user } : Props) => {
+const Header =  ({ user } : Props) => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
-
   const pathUrl = usePathname();
   // Sticky menu
   const handleStickyMenu = () => {
@@ -158,7 +158,7 @@ const Header = ({ user } : Props) => {
           <div className=" flex items-center gap-3 xl:mt-0">
             <DarkModeSwitcher />
             <UserButton />
-            {user === null || user !== undefined  ? (
+            {User.length < 0 ? (
               <>
             <Link
               href="/agency/sign-in"

@@ -178,10 +178,10 @@ const Page = async ({
             <CardHeader>
               <CardTitle>Agency Goal</CardTitle>
               <CardDescription>
-                <p className="mt-2">
+                <div className="mt-2">
                   Reflects the number of sub accounts you want to own and
                   manage.
-                </p>
+                </div>
               </CardDescription>
             </CardHeader>
             <CardFooter>

@@ -6,15 +6,6 @@ import { UserButton } from '@clerk/nextjs'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '../ui/sheet'
-import { Bell } from 'lucide-react'
 import { Role } from '@prisma/client'
 import { Card } from '../ui/card'
 import { Switch } from '../ui/switch'
@@ -138,7 +129,7 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
 
         <ul className="flex h-auto flex-col overflow-y-auto max-h-96 overflow-y-scroll rounded-xl">
         {allNotifications?.map((notification) => (
-          <li>
+          <li key={notification.userId}>
           <Link
           className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
           href="/messages"
@@ -170,8 +161,8 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
         ))}
         {allNotifications?.length === 0 && (
     <div
-      className="flex items-center justify-center text-muted-foreground"
-      mb-4
+      className="flex items-center justify-center text-muted-foreground mb-4"
+     
     >
       You have no notifications
     </div>

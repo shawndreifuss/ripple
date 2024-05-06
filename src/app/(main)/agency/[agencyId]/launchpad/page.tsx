@@ -91,7 +91,7 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
-            <div className="flex justify-between items-center w-full border p-4 rounded-lg gap-2">
+            <div className="flex justify-between items-center w-full border div-4 rounded-lg gap-2">
               <div className="flex md:items-center gap-4 flex-col md:!flex-row">
                 <Image
                   src="/appstore.png"
@@ -100,7 +100,7 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
                   width={80}
                   className="rounded-md object-contain"
                 />
-                <p> Save the website as a shortcut on your mobile device</p>
+                <div> Save the website as a shortcut on your mobile device</div>
               </div>
               <Button>Start</Button>
             </div>
@@ -113,10 +113,10 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
                   width={80}
                   className="rounded-md object-contain"
                 />
-                <p>
+                <div>
                   Connect your stripe account to accept payments and see your
                   dashboard.
-                </p>
+                </div>
               </div>
               {agencyDetails.connectAccountId || connectedStripeAccount ? (
                 <CheckCircleIcon
@@ -141,7 +141,7 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
                   width={80}
                   className="rounded-md object-contain"
                 />
-                <p> Fill in all your bussiness details</p>
+                <div> Fill in all your bussiness details</div>
               </div>
               {allDetailsExist ? (
                 <CheckCircleIcon
