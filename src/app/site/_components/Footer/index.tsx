@@ -25,7 +25,6 @@ const Footer = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
-                transition={{ duration: 1, delay: 0.5 }}
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
@@ -78,7 +77,6 @@ Ripple.
                   }}
                   initial="hidden"
                   whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
                   className="animate_top"
                 >
@@ -136,7 +134,6 @@ Ripple.
                   }}
                   initial="hidden"
                   whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
                   className="animate_top"
                 >
@@ -194,7 +191,6 @@ Ripple.
                   }}
                   initial="hidden"
                   whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
                   viewport={{ once: true }}
                   className="animate_top"
                 >
@@ -262,7 +258,6 @@ Ripple.
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_top"
             >
@@ -299,7 +294,6 @@ Ripple.
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_top"
             >
@@ -322,7 +316,6 @@ Ripple.
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_top"
             >

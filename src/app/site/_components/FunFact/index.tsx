@@ -51,7 +51,7 @@ const FunFact = () => {
             }}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 1, delay: 0.1 }}
+            
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
@@ -80,7 +80,6 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >
@@ -103,7 +102,6 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.7 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >
@@ -126,7 +124,6 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.8 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >

@@ -188,7 +188,7 @@ const Contact = () => {
               <div className="5 mb-7">
                 
                 <div className="flex gap-4 w-full space-around">
-                <ul className="flex items-center gap-5">
+                <ul className="flex items-center gap-5 mt-5">
                 <li>
                   <Link href="#" aria-label="social icon">
                     <svg
