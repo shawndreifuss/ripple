@@ -31,7 +31,7 @@ export default authMiddleware({
     }
 
     if (
-      url.pathname === '/agency' ||
+      url.pathname === '/' ||
       (url.pathname === '/site' && url.host === process.env.NEXT_PUBLIC_DOMAIN)
     ) {
       return NextResponse.rewrite(new URL('/site', req.url))
