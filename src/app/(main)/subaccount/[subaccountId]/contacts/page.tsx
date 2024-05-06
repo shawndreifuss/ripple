@@ -14,6 +14,8 @@ import { Contact, SubAccount, Ticket } from '@prisma/client'
 import format from 'date-fns/format'
 import React from 'react'
 import CraeteContactButton from './_components/create-contact-btn'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
+import { Separator } from '@/components/ui/separator'
 
 type Props = {
   params: { subaccountId: string }
@@ -63,8 +65,25 @@ const ContactPage = async ({ params }: Props) => {
   }
   return (
     <BlurPage>
-      <h1 className="text-4xl p-4">Contacts</h1>
+             <Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/agency">Agency</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>sub-account</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>contacts</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+      <Separator className=" my-6" />
+      <div className='flex w-full justify-start align-center p-1 mb-2'>
       <CraeteContactButton subaccountId={params.subaccountId} />
+      </div>
       <Table>
         <TableHeader>
           <TableRow>

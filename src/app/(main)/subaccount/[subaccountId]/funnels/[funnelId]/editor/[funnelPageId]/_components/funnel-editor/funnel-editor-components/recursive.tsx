@@ -6,6 +6,7 @@ import VideoComponent from './video'
 import LinkComponent from './link-component'
 import ContactFormComponent from './contact-form-component'
 import Checkout from './checkout'
+import Navbar from './navbar'
 
 type Props = {
   element: EditorElement
@@ -25,9 +26,12 @@ const Recursive = ({ element }: Props) => {
       return <Checkout element={element} />
     case '2Col':
       return <Container element={element} />
+    case '3Col':
+      return <Container element={element} />
     case '__body':
       return <Container element={element} />
-
+    case 'navbar':
+      return <Navbar element={element} />
     case 'link':
       return <LinkComponent element={element} />
     default:

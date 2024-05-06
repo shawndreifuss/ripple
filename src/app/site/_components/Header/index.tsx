@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { UserButton } from '@clerk/nextjs'
 import { User } from '@clerk/nextjs/server'
 import menuData from "./menuData";
-import ThemeToggler from "./ThemeToggler";
+import DarkModeSwitcher from "../Toggle/DarkModeSwitcher";
 
 type Props = {
   user?: null | User
@@ -19,7 +19,6 @@ const Header = ({ user } : Props) => {
   const [stickyMenu, setStickyMenu] = useState(false);
 
   const pathUrl = usePathname();
-
   // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -38,25 +37,25 @@ const Header = ({ user } : Props) => {
       className={`fixed left-0 top-0 z-99999 w-full py-7 ${
         stickyMenu
           ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
-          : ""
+          : "bg-blur-md"
       }`}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          <Link href="/">
+          <Link href="/" >
             <Image
-              src="/assets/r-logo.png"
+              src="/assets/dark-logo.jpeg"
               alt="logo"
               width={119.03}
-              height={20}
-              className="hidden w-full dark:block"
+              height={10}
+              className="hidden  scale-150 dark:block"
             />
             <Image
-              src="/assets/r-logo.png"
+              src="/assets/light-logo.jpeg"
               alt="logo"
               width={119.03}
-              height={20}
-              className="w-full dark:hidden"
+              height={10}
+              className=" dark:hidden scale-150"
             />
           </Link>
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -156,10 +155,10 @@ const Header = ({ user } : Props) => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex items-center gap-3 xl:mt-0">
-            <ThemeToggler/>
+          <div className=" flex items-center gap-3 xl:mt-0">
+            <DarkModeSwitcher />
             <UserButton />
-            {user ? (
+            {user === null || user !== undefined  ? (
               <>
             <Link
               href="/agency/sign-in"

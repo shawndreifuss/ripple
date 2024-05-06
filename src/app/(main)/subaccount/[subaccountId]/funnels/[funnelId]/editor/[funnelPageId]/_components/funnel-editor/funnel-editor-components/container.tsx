@@ -65,7 +65,7 @@ const Container = ({ element }: Props) => {
             containerId: id,
             elementDetails: {
               content: {
-                src: 'https://www.youtube.com/embed/A3l6YYkXzzg?si=zbcCeWcpq7Cwf8W1',
+                src: 'https://www.youtube.com/watch?v=4cEKAYnxbrk',
               },
               id: v4(),
               name: 'Video',
@@ -146,6 +146,65 @@ const Container = ({ element }: Props) => {
               name: 'Two Columns',
               styles: { ...defaultStyles, display: 'flex' },
               type: '2Col',
+            },
+          },
+        })
+        break
+        case '3Col':
+        dispatch({
+          type: 'ADD_ELEMENT',
+          payload: {
+            containerId: id,
+            elementDetails: {
+              content: [
+                {
+                  content: [],
+                  id: v4(),
+                  name: 'Container',
+                  styles: { ...defaultStyles, width: '100%' },
+                  type: 'container',
+                },
+                {
+                  content: [],
+                  id: v4(),
+                  name: 'Container',
+                  styles: { ...defaultStyles, width: '100%' },
+                  type: 'container',
+                },
+                {
+                  content: [],
+                  id: v4(),
+                  name: 'Container',
+                  styles: { ...defaultStyles, width: '100%' },
+                  type: 'container',
+                },
+              ],
+              id: v4(),
+              name: 'Two Columns',
+              styles: { ...defaultStyles, display: 'flex' },
+              type: '3Col',
+            },
+          },
+        })
+        break
+        case 'navbar':
+        dispatch({
+          type: 'ADD_ELEMENT',
+          payload: {
+            containerId: id,
+            elementDetails: {
+              content: {
+                brand: 'Plutonium',
+                link1: '/',
+                link2: '/blogs',
+                link3: '/about-us',
+                link4: '/contact-us',
+                
+              },
+              id: v4(),
+              name: 'navbar',
+              styles: {},
+              type: 'navbar',
             },
           },
         })
@@ -232,7 +291,7 @@ const Container = ({ element }: Props) => {
       {state.editor.selectedElement.id === element.id &&
         !state.editor.liveMode &&
         state.editor.selectedElement.type !== '__body' && (
-          <div className="absolute bg-primary px-2.5 py-1 text-xs font-bold  -top-[25px] -right-[1px] rounded-none rounded-t-lg ">
+          <div className="absolute bg-primary px-2.5 py-1 text-xs font-bold cursor-pointer  -top-[25px] -right-[1px] rounded-none rounded-t-lg ">
             <Trash
               size={16}
               onClick={handleDeleteElement}

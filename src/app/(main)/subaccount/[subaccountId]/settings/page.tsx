@@ -4,6 +4,9 @@ import BlurPage from '@/components/global/blur-page'
 import { db } from '@/lib/db'
 import { currentUser } from '@clerk/nextjs'
 import React from 'react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
+import { Separator } from '@/components/ui/separator'
+
 
 type Props = {
   params: { subaccountId: string }
@@ -34,6 +37,22 @@ const SubaccountSettingPage = async ({ params }: Props) => {
 
   return (
     <BlurPage>
+             <Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/agency">Agency</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>sub-account</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>settings</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+      <Separator className=" my-6" />
       <div className="flex lg:!flex-row flex-col gap-4">
         <SubAccountDetails
           agencyDetails={agencyDetails}

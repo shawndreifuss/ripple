@@ -31,10 +31,10 @@ export const pricingCards = [
   {
     title: 'Starter',
     description: 'Perfect for trying out plura',
-    price: 'Free',
+    price: '$0',
     duration: '',
     highlight: 'Key features',
-    features: ['3 Sub accounts', '2 Team members', 'Unlimited pipelines'],
+    features: ['300 GB Storage','Unlimited Pipelines','Limited Photos and Videos','Limited Sub Accounts', 'Limited Team Members'],
     priceId: '',
   },
   {
@@ -43,7 +43,7 @@ export const pricingCards = [
     price: '$199',
     duration: 'month',
     highlight: 'Key features',
-    features: ['Rebilling', '24/7 Support team'],
+    features: ['300 GB Storage','Unlimited Pipelines','Unlimited Photos and Videos','24/7 Support', 'Everything in Basic]'],
     priceId: 'price_1PCallJ7V6LXh8G3xz4pKvS1',
   },
   {
@@ -52,7 +52,7 @@ export const pricingCards = [
     price: '$49',
     duration: 'month',
     highlight: 'Everything in Starter, plus',
-    features: ['Unlimited Sub accounts', 'Unlimited Team members'],
+    features: ['300 GB Storage','Unlimited Pipelines','Unlimited Sub accounts', 'Unlimited Team members', 'Everything in Starter'],
     priceId: 'price_1PCallJ7V6LXh8G3aKkI71ef',
   },
 ]
@@ -222,6 +222,7 @@ export type EditorBtns =
   | 'image'
   | null
   | '3Col'
+  | 'navbar'
 
 export const defaultStyles: React.CSSProperties = {
   backgroundPosition: 'center',
@@ -230,3 +231,5 @@ export const defaultStyles: React.CSSProperties = {
   textAlign: 'left',
   opacity: '100%',
 }
+
+

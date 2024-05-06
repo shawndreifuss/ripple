@@ -6,6 +6,7 @@ import {
   SubAccount,
   SubAccountSidebarOption,
 } from '@prisma/client'
+import { useSearchParams } from "next/navigation";
 import React, { useEffect, useMemo, useState } from 'react'
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet'
 import { Button } from '../ui/button'
@@ -14,6 +15,7 @@ import clsx from 'clsx'
 import { AspectRatio } from '../ui/aspect-ratio'
 import Image from 'next/image'
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
+import { usePathname } from 'next/navigation';
 import {
   Command,
   CommandEmpty,
@@ -51,11 +53,21 @@ const MenuOptions = ({
 }: Props) => {
   const { setOpen } = useModal()
   const [isMounted, setIsMounted] = useState(false)
-
+  const [active, setActive] = useState("Dashboard")
+console.log(active , "active")
   const openState = useMemo(
     () => (defaultOpen ? { open: true } : {}),
     [defaultOpen]
   )
+
+  const pathname = usePathname()
+  const page = pathname.split('/')[3]
+  const [onPage, setOnPage] = useState(page)
+
+  useEffect(() => {
+    setOnPage(page)
+  }
+  , [page])
 
   useEffect(() => {
     setIsMounted(true)
@@ -64,6 +76,7 @@ const MenuOptions = ({
   if (!isMounted) return
 
   return (
+    <>
     <Sheet
       modal={false}
       {...openState}
@@ -91,7 +104,27 @@ const MenuOptions = ({
           }
         )}
       >
+
         <div>
+          <div className='flex flex-col '>
+        <div className='flex align-center justify-center w-full mb-4'>
+        <Link href="/" >
+            <Image
+              src="/assets/dark-logo.jpeg"
+              alt="logo"
+              width={100}
+              height={100}
+              className="hidden  scale-100 dark:block"
+            />
+            <Image
+              src="/assets/light-logo.jpeg"
+              alt="logo"
+              width={100}
+              height={100}
+              className=" dark:hidden scale-100"
+            />
+          </Link>
+     </div> <div className='w-full border border-accent mb-6'/></div>
           <AspectRatio ratio={16 / 5}>
             <Image
               src={sidebarLogo}
@@ -179,6 +212,7 @@ const MenuOptions = ({
                         </CommandItem>
                       </CommandGroup>
                     )}
+                    {/* Where to edit  */}
                   <CommandGroup heading="Accounts">
                     {!!subAccounts
                       ? subAccounts.map((subaccount) => (
@@ -279,10 +313,14 @@ const MenuOptions = ({
                       <CommandItem
                         key={sidebarOptions.id}
                         className="md:w-[320px] w-full"
+                        onClick={() => setActive(sidebarOptions.name)}
                       >
                         <Link
                           href={sidebarOptions.link}
-                          className="flex items-center gap-2 hover:bg-transparent rounded-md transition-all md:w-full w-[320px]"
+                          
+                          className={"flex items-center gap-2 hover:bg-transparent rounded-md transition-all md:w-full w-[320px] focus:bg-transparent  "
+                            
+                          }
                         >
                           {val}
                           <span>{sidebarOptions.name}</span>
@@ -297,7 +335,22 @@ const MenuOptions = ({
         </div>
       </SheetContent>
     </Sheet>
+    </>
   )
 }
 
 export default MenuOptions
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

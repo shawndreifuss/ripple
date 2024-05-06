@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 
 const Page = async ({
   params,
@@ -117,7 +118,17 @@ const Page = async ({
           </Card>
         </div>
       )}
-      <h1 className="text-4xl">Dashboard</h1>
+      <Breadcrumb>
+      <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={`/agency`}>Dashboard</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
       <Separator className=" my-6" />
       <div className="flex flex-col gap-4 pb-6">
         <div className="flex gap-4 flex-col xl:!flex-row">
@@ -205,7 +216,7 @@ const Page = async ({
               index="created"
               categories={['amount_total']}
               colors={['primary']}
-              yAxisWidth={30}
+              yAxisWidth={50}
               showAnimation={true}
             />
           </Card>

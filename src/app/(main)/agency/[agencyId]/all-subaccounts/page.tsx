@@ -10,6 +10,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 import {
   Command,
   CommandEmpty,
@@ -22,10 +23,18 @@ import { getAuthUserDetails } from '@/lib/queries'
 import { SubAccount } from '@prisma/client'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import React from 'react'
 import DeleteButton from './_components/delete-button'
 import CreateSubaccountButton from './_components/create-subaccount-btn'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
 
 type Props = {
   params: { agencyId: string }
@@ -34,15 +43,36 @@ type Props = {
 const AllSubaccountsPage = async ({ params }: Props) => {
   const user = await getAuthUserDetails()
   if (!user) return
-
   return (
-    <AlertDialog>
+    <>
+      <AlertDialog>
       <div className="flex flex-col ">
+        <div className='flex justify-between align-center text-center w-full'>
+          <div className='mt-4'>
+        <Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={`/agency/${user?.agencyId}`}>{user?.Agency?.name}</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage >Sub-accounts</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+</div>
+
         <CreateSubaccountButton
           user={user}
           id={params.agencyId}
-          className="w-[200px] self-end m-6"
+          className="w-[200px] self-end mr-6 mb-2 "
         />
+        </div>
+        <Separator className=" my-6" />
         <Command className="rounded-lg bg-transparent">
           <CommandInput placeholder="Search Account..." />
           <CommandList>
@@ -115,6 +145,7 @@ const AllSubaccountsPage = async ({ params }: Props) => {
         </Command>
       </div>
     </AlertDialog>
+    </>
   )
 }
 

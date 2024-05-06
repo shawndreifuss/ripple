@@ -17,15 +17,14 @@ export const testimonialData: Testimonial[] = [
     designation: "Founter @democompany",
     image: image1,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Built a custom SaaS solution perfectly with Ripple. Flexible & powerful! ",
   },
   {
     id: 2,
     name: "Jhon Abraham",
     designation: "Founter @democompany",
     image: image2,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+    content: "Ripple's UI boosted user engagement by 20%! Love their platform. 10/10!",
   },
   {
     id: 3,
@@ -33,7 +32,7 @@ export const testimonialData: Testimonial[] = [
     designation: "Founter @democompany",
     image: image1,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Ripple's pre-builts saved us tons of time launching our MVP. We're now on our way to raising our seed round!",
   },
   {
     id: 4,
@@ -41,6 +40,7 @@ export const testimonialData: Testimonial[] = [
     designation: "Founter @democompany",
     image: image2,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Ripple manages content, users, payments - a breeze! Focus on content, not ops.  ",
+
   },
 ];

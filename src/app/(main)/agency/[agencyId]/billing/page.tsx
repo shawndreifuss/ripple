@@ -14,7 +14,8 @@ import {
 import clsx from 'clsx'
 import SubscriptionHelper from './_components/subscription-helper'
 import React from 'react'
-
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
+import { getAuthUserDetails } from '@/lib/queries'
 type Props = {
   params: { agencyId: string }
 }
@@ -37,7 +38,7 @@ const page = async ({ params }: Props) => {
     },
   })
 
-
+  const user = await getAuthUserDetails()
 
   const prices = await stripe.prices.list({
     product: process.env.NEXT_PLURA_PRODUCT_ID,
@@ -67,13 +68,27 @@ const page = async ({ params }: Props) => {
 
   return (
     <>
+        <Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={`/agency/${user?.agencyId}`}>{user?.Agency?.name}</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage >Billing</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+      <Separator className=" my-6" />
       <SubscriptionHelper
         prices={prices.data}
         customerId={agencySubscription?.customerId || ''}
         planExists={agencySubscription?.Subscription?.active === true}
       />
-      <h1 className="text-4xl p-4">Billing</h1>
-      <Separator className=" mb-6" />
       <h2 className="text-2xl p-4">Current Plan</h2>
       <div className="flex flex-col lg:!flex-row justify-between gap-8">
         <PricingCard

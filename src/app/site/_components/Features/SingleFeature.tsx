@@ -1,7 +1,12 @@
 import React from "react";
-import { Feature } from "@/types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
+type Feature = {
+  icon: string;
+  title: string;
+  description: string;
+};
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, description } = feature;

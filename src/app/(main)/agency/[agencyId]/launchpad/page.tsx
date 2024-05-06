@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 import { db } from '@/lib/db'
 import { getStripeOAuthLink } from '@/lib/utils'
 import { CheckCircleIcon } from 'lucide-react'
@@ -13,6 +14,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { stripe } from '@/lib/stripe'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 
 type Props = {
   params: {
@@ -66,6 +68,19 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
   }
 
   return (
+    <>
+    <Breadcrumb>
+     <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage >Sub-accounts</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+      <Separator className=" my-6" />
     <div className="flex flex-col justify-center items-center">
       <div className="w-full h-full max-w-[800px]">
         <Card className="border-none">
@@ -146,6 +161,7 @@ const LaunchPadPage = async ({ params, searchParams }: Props) => {
         </Card>
       </div>
     </div>
+    </>
   )
 }
 

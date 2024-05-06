@@ -12,6 +12,8 @@ import React from 'react'
 import PipelineInfoBar from '../_components/pipeline-info-bar'
 import PipelineSettings from '../_components/pipeline-settings'
 import PipelineView from '../_components/pipeline-view'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
+import { Separator } from '@/components/ui/separator'
 
 type Props = {
   params: { subaccountId: string; pipelineId: string }
@@ -31,6 +33,23 @@ const PipelinePage = async ({ params }: Props) => {
   )) as LaneDetail[]
 
   return (
+    <>
+           <Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/agency">Agency</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>sub-account</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href={'#'}>pipelines</BreadcrumbLink>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+      <Separator className=" my-6" />
     <Tabs
       defaultValue="view"
       className="w-full"
@@ -64,6 +83,7 @@ const PipelinePage = async ({ params }: Props) => {
         />
       </TabsContent>
     </Tabs>
+    </>
   )
 }
 

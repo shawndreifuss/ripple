@@ -1,6 +1,13 @@
 import React from "react";
-import { FeatureTab } from "@/types/featureTab";
 import Image from "next/image";
+
+type FeatureTab = {
+  title: string;
+  desc1: string;
+  desc2: string;
+  image: string;
+  imageDark: string;
+};
 
 const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
   const { title, desc1, desc2, image, imageDark } = featureTab;
