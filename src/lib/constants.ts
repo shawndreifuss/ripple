@@ -27,6 +27,7 @@ import Tune from '@/components/icons/tune'
 import Video from '@/components/icons/video_recorder'
 import Wallet from '@/components/icons/wallet'
 import Warning from '@/components/icons/warning'
+
 export const pricingCards = [
   {
     title: 'Starter',
@@ -58,7 +59,7 @@ export const pricingCards = [
 ]
 //  Change Priority support
 export const addOnProducts = [
-  { title: 'Priority Support', id: 'prod_Q2gKsImxCO6iXT' },
+  { title: 'Priority Support', id: 'prod_Q2hqp3HvpT6731' },
 ]
 
 export const icons = [
