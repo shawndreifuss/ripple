@@ -187,4 +187,25 @@ pre {
   @apply bg-stroke text-black bg-blackho text-white;
 }
 
+.custom-loader {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  
+  background-repeat: no-repeat;
+  animation: s8 2s infinite;
+}
 
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+
+  border-radius: 50%;
+}
+.custom-loader::after {
+  margin:20%;
+}
+
+@keyframes s8 {
+  100% {transform: rotate(1turn)}
+}
