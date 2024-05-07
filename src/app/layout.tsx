@@ -28,6 +28,7 @@ export default function RootLayout({
     >
       <meta name="description" content="Built with Next.js and TypeScript" />
       <link rel="icon" href="/assets/logo-icon.png" />
+      <link rel="preload" href="http://localhost:3000/_next/static/css/app/site/page.css?v=1715043308787" as="style"/> 
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
