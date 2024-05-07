@@ -14,6 +14,8 @@ export default authMiddleware({
       searchParams.length > 0 ? `?${searchParams}` : ''
     }`
 
+
+    console.log(req)
     //if subdomain exists
     const customSubDomain = hostname
       .get('host')
@@ -31,8 +33,9 @@ export default authMiddleware({
     }
 
     if (
-      url.pathname === '/' ||
+      url.pathname === '/' || 
       (url.pathname === '/site' && url.host === process.env.NEXT_PUBLIC_DOMAIN)
+
     ) {
       return NextResponse.rewrite(new URL('/site', req.url))
     }
