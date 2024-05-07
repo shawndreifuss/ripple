@@ -488,12 +488,12 @@ export const sendInvitation = async (
         role,
       },
     })
-    return   console.log(invitation)
+    return invitation
   } catch (error) {
     console.log(error)
     throw error
   }
-  return response 
+  return response
 }
 
 export const getMedia = async (subaccountId: string) => {

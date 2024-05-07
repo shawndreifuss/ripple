@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Database, Plus, SettingsIcon, SquareStackIcon } from 'lucide-react'
+import { BookTemplate, Database, Plus, SettingsIcon, SquareStackIcon } from 'lucide-react'
 
 type Props = {}
 
@@ -31,6 +31,12 @@ const TabList = (props: Props) => {
         className="w-10 h-10 p-0 data-[state=active]:bg-muted"
       >
         <Database />
+      </TabsTrigger>
+      <TabsTrigger
+        value="Templates"
+        className="w-10 h-10 p-0 data-[state=active]:bg-muted"
+      >
+        <BookTemplate />
       </TabsTrigger>
     </TabsList>
   )

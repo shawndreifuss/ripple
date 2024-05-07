@@ -224,6 +224,7 @@ export type EditorBtns =
   | null
   | '3Col'
   | 'navbar'
+  | 'portfolio-1'
 
 export const defaultStyles: React.CSSProperties = {
   backgroundPosition: 'center',

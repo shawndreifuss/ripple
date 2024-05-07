@@ -7,6 +7,7 @@ import LinkComponent from './link-component'
 import ContactFormComponent from './contact-form-component'
 import Checkout from './checkout'
 import Navbar from './navbar'
+import PortfolioTemplate from './portfolio-template'
 
 type Props = {
   element: EditorElement
@@ -34,6 +35,8 @@ const Recursive = ({ element }: Props) => {
       return <Navbar element={element} />
     case 'link':
       return <LinkComponent element={element} />
+      case 'portfolio-1':
+      return <PortfolioTemplate element={element} />
     default:
       return null
   }

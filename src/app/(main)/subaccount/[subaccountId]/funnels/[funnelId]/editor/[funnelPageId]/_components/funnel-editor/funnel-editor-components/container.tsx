@@ -209,6 +209,23 @@ const Container = ({ element }: Props) => {
           },
         })
         break
+        case 'portfolio-1':
+        dispatch({
+          type: 'ADD_ELEMENT',
+          payload: {
+            containerId: id,
+            elementDetails: {
+              content: {
+                
+              },
+              id: v4(),
+              name: 'portfolio-1',
+              styles: {},
+              type: 'portfolio-1',
+            },
+          },
+        })
+        break
     }
   }
 
