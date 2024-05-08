@@ -11,7 +11,7 @@ import Link from "next/link";
 
 
 type Props = {
-  element: EditorElement
+  element: EditorElement | any
 }
 
 const Hero1 = (props: Props) => {
