@@ -75,9 +75,12 @@ const blogData = [
     article?: string;
     image: string;
   };
+  type BlogDetailsPageProps = {
+    blogData: Blog[]; // Define the type for the prop
+  };
   
 
-const BlogDetailsPage = ({ blogData }: { blogData: Blog[] }) => {
+  const BlogDetailsPage: React.FC<BlogDetailsPageProps> = ({ blogData }) => {
   const router = useRouter();
   const { id } = router.query;
   const blogId = typeof id === 'string' ? parseInt(id, 10) : -1; // Parse id to an integer
