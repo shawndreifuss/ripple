@@ -84,19 +84,12 @@ export const CreatePipelineFormSchema = z.object({
   name: z.string().min(1),
 })
 
-
-
 export const CreateFunnelFormSchema = z.object({
   name: z.string().min(1),
   description: z.string(),
   subDomainName: z.string().optional(),
   favicon: z.string().optional(),
 })
-     
-// Define a new schema including subAccountId
-export const CreateFunnelFormWithSubAccountIdSchema = CreateFunnelFormSchema.extend({
-  subAccountId: z.string(), // Add subAccountId to the schema
-});
 
 export type PipelineDetailsWithLanesCardsTagsTickets = Prisma.PromiseReturnType<
   typeof getPipelineDetails
@@ -125,8 +118,8 @@ export type TicketDetails = Prisma.PromiseReturnType<
 export const ContactUserFormSchema = z.object({
   name: z.string().min(1, 'Required'),
   email: z.string().email(),
-  
 })
+
 
 export const ContactUserFormComponent = z.object({
   name: z.string().min(1, 'Required'),
@@ -135,6 +128,7 @@ export const ContactUserFormComponent = z.object({
   message: z.string().optional(),
 
 })
+
 
 export type Address = {
   city: string
@@ -163,3 +157,7 @@ export type FunnelsForSubAccount = Prisma.PromiseReturnType<
 >[0]
 
 export type UpsertFunnelPage = Prisma.FunnelPageCreateWithoutFunnelInput
+
+
+
+
