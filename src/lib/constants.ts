@@ -16,7 +16,7 @@ import Notification from '@/components/icons/notification'
 import Payment from '@/components/icons/payment'
 import Person from '@/components/icons/person'
 import Pipelines from '@/components/icons/pipelines'
-import PluraCategory from '@/components/icons/plura-category'
+import RippleCategory from '@/components/icons/plura-category'
 import Power from '@/components/icons/power'
 import Receipt from '@/components/icons/receipt'
 import Send from '@/components/icons/send'
@@ -31,7 +31,7 @@ import Warning from '@/components/icons/warning'
 export const pricingCards = [
   {
     title: 'Starter',
-    description: 'Perfect for trying out plura',
+    description: 'Perfect for trying out Ripple',
     price: '$0',
     duration: '',
     highlight: 'Key features',
@@ -201,7 +201,7 @@ export const icons = [
   {
     value: 'category',
     label: 'Category',
-    path: PluraCategory,
+    path: RippleCategory,
   },
   {
     value: 'clipboardIcon',
