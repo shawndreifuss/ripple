@@ -11,7 +11,7 @@ import SingleFeature from './_components/SingleFeature'
 
 
 type Props = {
-  element: EditorElement
+  element: EditorElement | any
 }
 
 const Features1 = (props: Props) => {
@@ -22,38 +22,38 @@ const Features1 = (props: Props) => {
         {
           id: 1,
           icon: "/images/icon/icon-01.svg",
-          title: `${props.element.content?.fTitle1}`,
-          description:  `${props.element.content?.fDescription1}`,
+          title: props.element.content?.fTitle1,
+          description:  props.element.content?.fDescription1,
           },
         {
           id: 2,
           icon: "/images/icon/icon-02.svg",
-          title: `${props.element.content?.fTitle2}`,
-          description: `${props.element.content?.fDescription2}`,
+          title: props.element.content?.fTitle2,
+          description: props.element.content?.fDescription2,
         },
         {
           id: 3,
           icon: "/images/icon/icon-03.svg",
-          title: `${props.element.content?.fTitle3}`,
-          description:`${props.element.content?.fDescription3}`,
+          title: props.element.content?.fTitle3,
+          description:props.element.content?.fDescription3,
         },
         {
           id: 4,
           icon: "/images/icon/icon-04.svg",
-          title:`${props.element.content?.fTitle4}`,
-          description:`${props.element.content?.fDescription4}`,
+          title:props.element.content?.fTitle4,
+          description:props.element.content?.fDescription4,
         },
         {
           id: 5,
           icon: "/images/icon/icon-05.svg",
-          title: `${props.element.content?.fTitle5}`,
-          description:`${props.element.content?.fDescription5}`,
+          title: props.element.content?.fTitle5,
+          description:props.element.content?.fDescription5,
         },
         {
           id: 6,
           icon: "/images/icon/icon-06.svg",
-          title: `${props.element.content?.fTitle6}`,
-          description:`${props.element.content?.fDescription6}`,
+          title: props.element.content?.fTitle6,
+          description:props.element.content?.fDescription6,
         },
       ];
       

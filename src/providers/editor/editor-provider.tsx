@@ -45,7 +45,9 @@ export type EditorElement = {
   fDescription5?: string;
   fDescription6?: string;
 
-  content: EditorElement[] | ContentObject;
+  content: 
+  | EditorElement[] 
+  | ContentObject;
 };
 
 type ContentObject = {
