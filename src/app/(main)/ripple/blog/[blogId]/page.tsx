@@ -5,81 +5,27 @@ import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
 import { useRouter } from "next/router";
+import blogData from "@/components/Blog/blogData";
 
-
-
-
-const blogData = [
-  {
-    id: 1,
-    title: "The Best Way to Learn Next.Js",
-    paragraph:
-    "Mastering Next.js: Your Ultimate Guide to Effective Learning",
-    article: "In the realm of modern web development, Next.js stands out as a powerful framework for building React applications. Its robust features, including server-side rendering, static site generation, and seamless routing, make it a top choice for developers aiming to create dynamic and performant web experiences. However, mastering Next.js requires more than just understanding its syntax and basic functionalities. It involves diving deep into its core concepts, exploring advanced techniques, and harnessing its full potential to build cutting-edge web applications. This comprehensive guide will walk you through the essential steps to become proficient in Next.js development, covering everything from setting up your environment to deploying production-ready applications.  Understanding the Basics: Before delving into the intricacies of Next.js, it's crucial to grasp the fundamentals. Familiarize yourself with React.js, JavaScript, and basic web development concepts like HTML, CSS, and JavaScript (ES6+). Next.js builds upon React, so having a solid understanding of React principles is essential. Setting Up Your Environment: Get your development environment ready by installing Node.js and npm (Node Package Manager). Next.js projects are created using npm, which simplifies dependency management and project configuration. Install Next.js globally using npm to access its command-line interface (CLI) for creating and managing projects.Creating Your First Next.js App: Dive into hands-on learning by creating your first Next.js application. Use the Next.js CLI to bootstrap a new project, and explore the project structure to understand how Next.js organizes files and folders. Start with a basic 'Hello, World!' example and gradually add more features to get a feel for Next.js development.Understanding Pages and Routing: Next.js simplifies client-side and server-side routing with its intuitive file-based routing system. Learn how to create pages by adding files to the 'pages' directory and how Next.js automatically handles routing based on file names. Explore dynamic routes, nested routes, and route parameters to build dynamic and SEO-friendly applications.  Working with Data: Next.js provides robust data fetching capabilities, allowing you to fetch data from various sources like APIs, databases, and local files. Explore different data fetching methods, including static generation (getStaticProps and getStaticPaths), server-side rendering (getServerSideProps), and client-side data fetching (SWR). Master data fetching techniques to optimize performance and user experience.  Styling and Theming: Style your Next.js applications with ease using CSS modules, styled-components, or Tailwind CSS. Learn how to integrate popular CSS frameworks like Bootstrap or Material-UI into your Next.js projects and customize styles using global CSS files or CSS-in-JS solutions. Explore theming options to maintain consistency and create visually appealing user interfaces. Optimizing Performance: Performance optimization is crucial for delivering fast and responsive web experiences. Explore techniques like code splitting, lazy loading, and image optimization to reduce bundle size and improve page load times. Leverage Next.js features like automatic static optimization (Incremental Static Regeneration) to generate static pages at build time and ensure lightning-fast performance.Testing and Debugging: Ensure the reliability and stability of your Next.js applications by implementing robust testing strategies. Learn how to write unit tests, integration tests, and end-to-end tests using popular testing frameworks like Jest and React Testing Library. Use Next.js's built-in support for testing to write comprehensive test suites and debug issues effectively. Deployment and Hosting: Deploy your Next.js applications to production-ready environments using platforms like Vercel, Netlify, or AWS Amplify. Learn how to configure deployment settings, set up continuous integration and continuous deployment (CI/CD) pipelines, and monitor application performance using analytics and logging tools. Choose the right hosting solution based on your project requirements and scalability needs. Continuous Learning and Community Engagement: The field of web development is constantly evolving, and staying updated with the latest trends and technologies is essential. Engage with the Next.js community through forums, social media, and developer meetups to share knowledge, seek advice, and collaborate on projects. Embrace a growth mindset and commit to lifelong learning to master Next.js and excel in your web development journey.  By following these ten steps and immersing yourself in the world of Next.js development, you'll gain the knowledge, skills, and confidence to build powerful and scalable web applications with ease. Remember that mastery comes with practice, so keep coding, experimenting, and pushing the boundaries of what's possible with Next.js.}", 
-   
-     image: "/assets/blog.jpeg",
-    author: {
-      name: "Ripple",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["creative"],
-    publishDate: "2025",
-  },
-  {
-    id: 2,
-    title: "Tips to quickly improve your coding speed.",
-    paragraph:
-      "Boost Your Coding Efficiency: Tips for Rapidly Improving Your Programming Speed",
-      article: "Master Keyboard Shortcuts: Becoming proficient in keyboard shortcuts is crucial for boosting coding speed. By memorizing and consistently using shortcuts for common actions like copying, pasting, navigating between files, and invoking code snippets, developers can significantly reduce the time spent on repetitive tasks. Most modern Integrated Development Environments (IDEs) and code editors offer extensive shortcut options, allowing programmers to navigate and manipulate code more efficiently. Investing time in learning these shortcuts and incorporating them into your coding workflow can lead to substantial time savings and increased productivity. Use Code Templates and Snippets: Code templates and snippets are invaluable tools for accelerating the coding process. These pre-written code segments, which can range from simple code blocks to entire functions or classes, allow developers to quickly insert common patterns and structures into their codebase. By leveraging templates and snippets for tasks like creating new files, defining function signatures, or implementing design patterns, programmers can save time and effort, especially when working on repetitive tasks or starting new projects. Many code editors support customizable snippets and offer libraries of community-contributed snippets for various programming languages and frameworks. Learn Touch Typing: Touch typing, the ability to type without looking at the keyboard, is a fundamental skill for improving coding speed. By mastering touch typing techniques and building muscle memory for keyboard layouts, developers can type faster, more accurately, and with fewer errors. This skill enables programmers to focus more on the code itself rather than the act of typing, resulting in smoother and more efficient coding sessions. Many online resources and typing tutor programs are available to help individuals learn and practice touch typing, with interactive lessons and drills tailored to different skill levels. Familiarize Yourself with APIs and Libraries: Proficiency in using Application Programming Interfaces (APIs) and third-party libraries is essential for speeding up development tasks. Whether it's accessing data from web services, performing complex calculations, or implementing user interface components, understanding how to leverage existing APIs and libraries can save developers significant time and effort. By familiarizing themselves with popular libraries and frameworks relevant to their projects, programmers can take advantage of pre-built functionalities, avoid reinventing the wheel, and focus on solving higher-level problems. Practice Problem-Solving: Regular practice of coding exercises and challenges is essential for honing problem-solving skills and improving coding speed. Engaging in activities like coding competitions, algorithmic puzzles, or project-based learning helps developers sharpen their analytical thinking, algorithmic reasoning, and debugging abilities. By tackling a diverse range of problems and experimenting with different approaches, programmers can expand their coding repertoire, develop efficient problem-solving strategies, and become more adept at translating ideas into working code. Use Integrated Development Environments (IDEs): Integrated Development Environments (IDEs) are powerful tools that offer a wide range of features designed to streamline the coding process. Features like code auto-completion, syntax highlighting, code navigation, and built-in debugging tools enhance developers' productivity and efficiency. IDEs provide a unified environment for coding, testing, and debugging, eliminating the need to switch between multiple applications. Additionally, many IDEs support extensions and plugins that extend their functionality and adapt to developers' specific needs, further optimizing their coding workflow. Optimize Your Development Environment: Configuring your development environment for maximum productivity is crucial for improving coding speed. Customizing settings, organizing project files, and selecting the right tools and plugins can significantly enhance developers' efficiency and focus. By tailoring their development environment to suit their workflow preferences and project requirements, programmers can minimize distractions, reduce cognitive load, and streamline common tasks. Adopting a clean and organized workspace, setting up keyboard shortcuts, and utilizing version control systems like Git are examples of effective environment optimization strategies. Practice Code Refactoring: Regular code refactoring is essential for maintaining code quality and improving coding speed. Refactoring involves restructuring existing code to make it more readable, maintainable, and efficient without changing its external behavior. By eliminating code redundancies, improving naming conventions, and simplifying complex logic, developers can enhance code clarity and reduce the time spent on understanding and modifying code. Refactored codebases are easier to maintain, debug, and extend, enabling faster iterations and smoother collaboration among team members. Collaborate and Learn from Others: Collaboration and knowledge-sharing within the coding community are invaluable for accelerating learning and improving coding speed. Participating in code reviews, contributing to open-source projects, and engaging in online forums and communities allow developers to gain insights, exchange ideas, and receive constructive feedback from peers. By collaborating with others, programmers can learn new techniques, discover best practices, and broaden their perspectives on software development. Additionally, mentoring and teaching others can deepen their understanding of coding concepts and reinforce their mastery of programming skills. Take Regular Breaks and Stay Healthy: Prioritizing physical and mental well-being is crucial for sustaining coding speed and productivity in the long run. Taking regular breaks, staying hydrated, and practicing mindfulness techniques can help prevent burnout, maintain focus, and recharge cognitive resources. Engaging in physical activity, getting enough sleep, and adopting a balanced diet are essential for maintaining overall health and cognitive function. By incorporating healthy habits into their daily routines, developers can sustain their coding momentum, avoid fatigue, and achieve better long-term productivity. Remember, a healthy mind and body are the foundation of sustainable coding speed improvement.",
-    image: "/assets/blog-1.jpeg",
-    author: {
-      name: "Ripple",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
-    },
-    tags: ["computer"],
-    publishDate: "2025",
-  },
-  {
-    id: 3,
-    title: "Ripple. The New Way",
-    paragraph:
-      "Pioneering the Future of Business with Innovative Design and Technology ",
-    image: "/assets/blog-2.jpeg",
-    article: "Ripple: Pioneering the Future of Business with Innovative Design and Technology. In today's fast-paced digital landscape, businesses are constantly seeking innovative solutions to stay ahead of the curve, streamline operations, and engage with their audience effectively. At the forefront of this revolution is Ripple, a dynamic company dedicated to revolutionizing the way businesses build their online presence, stay organized, and communicate with their customers. With a unique blend of cutting-edge technology and creative design, Ripple offers a comprehensive software platform that empowers businesses to thrive in the digital age. Empowering Businesses Through Innovative Technology. At the heart of Ripple's mission is a commitment to leveraging the latest advancements in technology to empower businesses of all sizes. Our proprietary software combines powerful features such as intuitive website builders, robust project management tools, and seamless communication channels to provide businesses with the tools they need to succeed in today's competitive market. Streamlining Operations and Enhancing Efficiency. Ripple's software is designed to streamline business operations and enhance efficiency across all departments. From project planning and task assignment to time tracking and resource management, our platform offers a centralized hub for all business activities, enabling teams to collaborate effectively and achieve their goals with ease. With automated workflows and customizable dashboards, Ripple helps businesses optimize their processes, reduce overhead costs, and maximize productivity. Creating Engaging Online Experiences. In the digital age, having a strong online presence is essential for business success. Ripple's intuitive website builders empower businesses to create stunning, mobile-responsive websites that captivate audiences and drive conversions. With drag-and-drop functionality, customizable templates, and advanced design features, our platform makes it easy for businesses to build professional-looking websites that reflect their brand identity and resonate with their target audience. Fostering Seamless Communication and Collaboration. Effective communication is the cornerstone of business success. Ripple's integrated communication tools facilitate seamless collaboration among team members, clients, and stakeholders, regardless of their location. From real-time messaging and video conferencing to file sharing and task assignment, our platform provides everything businesses need to stay connected and aligned, even in remote work environments. By fostering a culture of collaboration and transparency, Ripple helps businesses build stronger relationships and drive better outcomes. Driving Innovation Through Continuous Improvement. At Ripple, we believe that innovation is the key to staying ahead of the competition. That's why we're committed to continuously improving our software platform to meet the evolving needs of our customers. Through regular updates, feature enhancements, and user feedback, we ensure that Ripple remains at the forefront of technological innovation, empowering businesses to adapt, grow, and thrive in an ever-changing digital landscape. Inspiring Creativity and Empowering Entrepreneurs. Beyond our software platform, Ripple is dedicated to inspiring creativity and empowering entrepreneurs to pursue their passions and turn their ideas into reality. Through educational resources, mentorship programs, and community events, we support aspiring business owners and innovators on their journey to success. By providing the tools, resources, and support they need to succeed, Ripple is helping to create a future where anyone can build and grow a successful business, regardless of their background or expertise. Join the Ripple Revolution. As we look towards the future, Ripple remains committed to driving positive change and empowering businesses to reach new heights of success. Whether you're a startup looking to make your mark or an established enterprise seeking to innovate and grow, Ripple is here to help you achieve your goals and unlock your full potential. Join the Ripple revolution today and discover a new way to build, design, and create the business of the future.",
-    author: {
-      name: "Ripple",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["design"],
-    publishDate: "2025",
-  },
-];
-
-
-// BlogDetailsPage.tsx
-
-  type Blog = {
-    id: number;
-    title: string;
-    author: {
-      name: string;
-      image: string;
-      designation: string;
-    };
-    tags: string[];
-    publishDate: string;
-    paragraph: string;
-    article?: string;
+ 
+type Blog = {
+  id: number;
+  title: string;
+  author: {
+    name: string;
     image: string;
+    designation: string;
   };
-  type BlogDetailsPageProps = {
-    blogData: Blog[]; // Define the type for the prop
-  };
-  
+  tags: string[];
+  publishDate: string;
+  paragraph: string;
+  article?: string;
+  image: string;
+};
 
+type BlogDetailsPageProps = {
+  blogData: Blog[]; // Define the type for the prop
+};
   const BlogDetailsPage: React.FC<BlogDetailsPageProps> = ({ blogData }) => {
   const router = useRouter();
   const { id } = router.query;
