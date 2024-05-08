@@ -54,25 +54,25 @@ const FunnelProductsTable: React.FC<FunnelProductsTableProps> = ({
       //@ts-ignore
       (prod) => prod.productId === product.default_price.id
     )
-    productIdExists
-      ? setLiveProducts(
-          liveProducts.filter(
-            (prod) =>
-              prod.productId !==
-              //@ts-ignore
-              product.default_price?.id
-          )
-        )
-      : //@ts-ignore
-        setLiveProducts([
-          ...liveProducts,
-          {
-            //@ts-ignore
-            productId: product.default_price.id as string,
-            //@ts-ignore
-            recurring: !!product.default_price.recurring,
-          },
-        ])
+    // productIdExists
+    //   ? setLiveProducts(
+    //       liveProducts.filter(
+    //         (prod) =>
+    //           // prod.productId !==
+    //           // //@ts-ignore
+    //           // product.default_price?.id
+    //       )
+    //     )
+    //   : //@ts-ignore
+    //     setLiveProducts([
+    //       ...liveProducts,
+    //       {
+    //         //@ts-ignore
+    //         productId: product.default_price.id as string,
+    //         //@ts-ignore
+    //         recurring: !!product.default_price.recurring,
+    //       },
+    //     ])
   }
 
   return (

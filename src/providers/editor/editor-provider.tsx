@@ -11,7 +11,7 @@ export type EditorElement = {
   styles: React.CSSProperties;
   name: string;
   type: EditorBtns;
- link1?: string;
+  link1?: string;
   link2?: string;
   link3?: string;
   link4?: string;
@@ -45,36 +45,36 @@ export type EditorElement = {
   fDescription5?: string;
   fDescription6?: string;
 
-  content:
-    | EditorElement[]
-    | {
-        href?: string;
-        innerText?: string;
-        src?: string;
-        phone?: string;
-        link1?: string;
-        link2?: string;
-        link3?: string;
-        link4?: string;
-        link5?: string;
-        path1?: string;
-        path2?: string;
-        path3?: string;
-        path4?: string;
-        path5?: string;
-        logoLight?: string;
-        logoDark?: string;
-        brand?: string;
-        headerLogo?: string;
-        title?: string;
-        subtitle?: string;
-        description?: string;
-        buttonText?: string;
-        buttonLink?: string;
-        buttonText2?: string;
-        buttonLink2?: string;
-        heroImage?: string;
-        fTitle1?: string;
+  content: EditorElement[] | ContentObject;
+};
+
+type ContentObject = {
+  href?: string;
+  innerText?: string;
+  src?: string;
+  link1?: string;
+  link2?: string;
+  link3?: string;
+  link4?: string;
+  link5?: string;
+  path1?: string;
+  path2?: string;
+  path3?: string;
+  path4?: string;
+  path5?: string;
+  logoLight?: string;
+  logoDark?: string;
+  brand?: string;
+  headerLogo?: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  buttonText2?: string;
+  buttonLink2?: string;
+  heroImage?: string;
+  fTitle1?: string;
   fTitle2?: string;
   fTitle3?: string;
   fTitle4?: string;
@@ -86,8 +86,8 @@ export type EditorElement = {
   fDescription4?: string;
   fDescription5?: string;
   fDescription6?: string;
-      };
 };
+
 
 export type Editor = {
   liveMode: boolean;
