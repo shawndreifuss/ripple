@@ -3,28 +3,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { ContactUserFormSchema } from '@/lib/types'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
 
-type Props = {
-  title: string
-  subTitle: string
-  apiCall: (values: z.infer<typeof ContactUserFormSchema>) => any
-}
-
-
-const Contact = ({ apiCall }: Props) => {
-  const form = useForm<z.infer<typeof ContactUserFormSchema>>({
-    mode: 'onChange',
-    resolver: zodResolver(ContactUserFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-    },
-  })
-  const isLoading = form.formState.isLoading
+const Contact = () => {
+  /**
+   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
+   * Reason: To fix rehydration error
+   */
   const [hasMounted, setHasMounted] = React.useState(false);
   React.useEffect(() => {
     setHasMounted(true);
@@ -36,7 +20,7 @@ const Contact = ({ apiCall }: Props) => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-4 md:px-8 2xl:px-0 ">
+      <section id="support" className="px-4 md:px-8 2xl:px-0">
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
@@ -78,8 +62,8 @@ const Contact = ({ apiCall }: Props) => {
               </h2>
 
               <form
-              {...form}
-                 onSubmit={form.handleSubmit(apiCall)}
+                action="https://formbold.com/s/unique_form_id"
+                method="POST"
               >
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
