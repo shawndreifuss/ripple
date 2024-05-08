@@ -84,12 +84,19 @@ export const CreatePipelineFormSchema = z.object({
   name: z.string().min(1),
 })
 
+
+
 export const CreateFunnelFormSchema = z.object({
   name: z.string().min(1),
   description: z.string(),
   subDomainName: z.string().optional(),
   favicon: z.string().optional(),
 })
+
+// Define a new schema including subAccountId
+export const CreateFunnelFormWithSubAccountIdSchema = CreateFunnelFormSchema.extend({
+  subAccountId: z.string(), // Add subAccountId to the schema
+});
 
 export type PipelineDetailsWithLanesCardsTagsTickets = Prisma.PromiseReturnType<
   typeof getPipelineDetails

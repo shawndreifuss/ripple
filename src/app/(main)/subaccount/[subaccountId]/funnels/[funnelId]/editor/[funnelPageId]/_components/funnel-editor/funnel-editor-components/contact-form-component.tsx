@@ -72,6 +72,8 @@ const ContactFormComponent = (props: Props) => {
       const response = await upsertContact({
         ...values,
         subAccountId: subaccountId,
+        name: values.name ? values.name : '',
+        email: values.email ? values.email : '',
         phone: values.phone ? values.phone : '',
         message: values.message ? values.message : '',
       })
