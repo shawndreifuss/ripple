@@ -10,7 +10,7 @@ import Link from "next/link";
 import { ModeToggle } from '@/components/global/mode-toggle'
 
 type Props = {
-  element: EditorElement
+  element: EditorElement | any
 }
 
 const Navbar = (props: Props) => {
