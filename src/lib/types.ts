@@ -92,7 +92,7 @@ export const CreateFunnelFormSchema = z.object({
   subDomainName: z.string().optional(),
   favicon: z.string().optional(),
 })
-
+     
 // Define a new schema including subAccountId
 export const CreateFunnelFormWithSubAccountIdSchema = CreateFunnelFormSchema.extend({
   subAccountId: z.string(), // Add subAccountId to the schema
