@@ -23,7 +23,7 @@ const menuData: Menu[] = [
     id: 31,
           title: "Blog",
           newTab: false,
-          path: "/ripple/blog",
+          path: "/ripple/blogs",
       },
   {
     id: 2.1,

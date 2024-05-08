@@ -4,8 +4,7 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
-import { useParams } from "next/navigation";
-
+import { useRouter } from "next/router";
 
 
 
@@ -60,27 +59,35 @@ const blogData = [
 ];
 
 
+// BlogDetailsPage.tsx
 
-
-const BlogDetailsPage = ( ) => { 
+  type Blog = {
+    id: number;
+    title: string;
+    author: {
+      name: string;
+      image: string;
+      designation: string;
+    };
+    tags: string[];
+    publishDate: string;
+    paragraph: string;
+    article?: string;
+    image: string;
+  };
   
-  const params = useParams();
-console.log(params)
-  // Initialize selectedBlog as null
-  // let selectedBlog = null;
 
-  // // Iterate over the blogData array to find the matching blog
-  // for (let i = 0; i < blogData.length; i++) {
-  //   if (blogData[i].id === Number(blogId)) {
-  //     selectedBlog = blogData[i];
-  //     break; // Exit the loop once the blog is found
-  //   }
-  // }
+const BlogDetailsPage = ({ blogData }: { blogData: Blog[] }) => {
+  const router = useRouter();
+  const { id } = router.query;
+  const blogId = typeof id === 'string' ? parseInt(id, 10) : -1; // Parse id to an integer
+
+  const selectedBlog = blogData.find(blog => blog.id === blogId);
+
 
   return (
     <>
-    {/* {selectedBlog ? ( */}
-
+    {selectedBlog ? (
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -407,9 +414,9 @@ console.log(params)
           </div>
         </div>
       </section>
-    {/* ) : (
+    ) : (
       <div>No blog found for the provided id</div>
-    )} */}
+    )} 
     </>
   );
 };
