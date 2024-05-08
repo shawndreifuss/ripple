@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import Loading from '@/components/global/loading'
-import { ContactUserFormSchema } from '@/lib/types'
+import { ContactUserFormComponent} from '@/lib/types'
 import {
     Form,
     FormControl,
@@ -21,14 +21,14 @@ import { Button } from "@/components/ui/button";
 
 type Props = {
   title: string
-  apiCall: (values: z.infer<typeof ContactUserFormSchema>) => any
+  apiCall: (values: z.infer<typeof ContactUserFormComponent>) => any
 }
 
 
 const ContactForm1 = ({ apiCall, title }: Props) => {
-  const form = useForm<z.infer<typeof ContactUserFormSchema>>({
+  const form = useForm<z.infer<typeof ContactUserFormComponent>>({
     mode: 'onChange',
-    resolver: zodResolver(ContactUserFormSchema),
+    resolver: zodResolver(ContactUserFormComponent),
     defaultValues: {
       name: '',
       email: '',
