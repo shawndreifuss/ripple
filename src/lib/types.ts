@@ -118,7 +118,7 @@ export type TicketDetails = Prisma.PromiseReturnType<
 export const ContactUserFormSchema = z.object({
   name: z.string().min(1, 'Required'),
   email: z.string().email(),
-
+  
 })
 
 export const ContactUserFormComponent = z.object({
@@ -126,7 +126,7 @@ export const ContactUserFormComponent = z.object({
   email: z.string().email(),
   phone: z.string().optional(),
   message: z.string().optional(),
-  
+
 })
 
 export type Address = {

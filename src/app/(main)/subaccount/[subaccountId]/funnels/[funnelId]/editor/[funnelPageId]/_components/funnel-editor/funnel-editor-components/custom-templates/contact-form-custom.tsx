@@ -8,7 +8,7 @@ import {
   saveActivityLogsNotification,
   upsertContact,
 } from '@/lib/queries'
-import { ContactUserFormSchema } from '@/lib/types'
+import { ContactUserFormComponent} from '@/lib/types'
 import { EditorElement, useEditor } from '@/providers/editor/editor-provider'
 import clsx from 'clsx'
 import { Trash } from 'lucide-react'
@@ -65,7 +65,7 @@ const ContactFormCustom = (props: Props) => {
   }
 
   const onFormSubmit = async (
-    values: z.infer<typeof ContactUserFormSchema>
+    values: z.infer<typeof ContactUserFormComponent>
   ) => {
     if (!state.editor.liveMode) return
 
