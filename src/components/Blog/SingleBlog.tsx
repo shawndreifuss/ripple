@@ -30,7 +30,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           </span>
           <Image src={image} alt="image" fill />
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+        <div className="dark:bg-background p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
           <h3>
             <Link
               href={`/ripple/blogs/${slug}`}

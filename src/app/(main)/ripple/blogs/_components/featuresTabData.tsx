@@ -34,7 +34,13 @@ type FeatureTab = {
         id: "tabSix",
         title: "Ripple",
         
-      }
+      },
+      {
+        id: "tabSeven",
+        title: "Ripple",
+        
+      },
+      
     
 
   ];
