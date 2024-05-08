@@ -1,7 +1,9 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
+import { blogData } from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
+import Tabs from "./_components/tabs";
+
 
 export const metadata: Metadata = {
   title: "Blog Page | Free Next.js Template for Startup and SaaS",
@@ -12,12 +14,8 @@ export const metadata: Metadata = {
 const Blog = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-
-      <section className="pb-[120px] pt-[120px]">
+      <Tabs />
+      <section className="pb-[120px] ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
