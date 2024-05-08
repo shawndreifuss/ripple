@@ -11,7 +11,7 @@ export type EditorElement = {
   styles: React.CSSProperties;
   name: string;
   type: EditorBtns;
-  link1?: string;
+ link1?: string;
   link2?: string;
   link3?: string;
   link4?: string;
@@ -51,6 +51,7 @@ export type EditorElement = {
         href?: string;
         innerText?: string;
         src?: string;
+        phone?: string;
         link1?: string;
         link2?: string;
         link3?: string;

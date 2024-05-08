@@ -18,11 +18,6 @@ import { redirect } from 'next/navigation'
 
 
 export default async function Home() {
-  const prices = await stripe.prices.list({
-    product: process.env.NEXT_PLURA_PRODUCT_ID,
-    active: true,
-  }) 
-
   const user = await getAuthUserDetails()
   
 

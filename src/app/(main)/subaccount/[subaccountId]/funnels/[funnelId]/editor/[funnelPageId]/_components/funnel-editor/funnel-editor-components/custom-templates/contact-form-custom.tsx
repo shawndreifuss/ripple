@@ -18,6 +18,7 @@ import { z } from 'zod'
 
 type Props = {
   element: EditorElement
+  
 }
 
 const ContactFormCustom = (props: Props) => {
@@ -72,7 +73,6 @@ const ContactFormCustom = (props: Props) => {
       const response = await upsertContact({
         ...values,
         phone: values.phone ? values.phone : '',
-        message: values.message ? values.message : '',
         subAccountId: subaccountId,
       })
       console.log(response)
