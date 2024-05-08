@@ -575,7 +575,7 @@ export const upsertFunnel = async (
       subAccountId: subaccountId,
     },
   })
-
+  
   return response
 }
 
