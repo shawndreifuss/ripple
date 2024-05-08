@@ -73,6 +73,9 @@ const ContactFormCustom = (props: Props) => {
       const response = await upsertContact({
         ...values,
         subAccountId: subaccountId,
+        name: values.name ? values.name : '',
+        email: values.email ? values.email : '',
+        
       })
       //WIP Call trigger endpoint
       await saveActivityLogsNotification({
