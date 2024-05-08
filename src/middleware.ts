@@ -15,7 +15,6 @@ export default authMiddleware({
     }`
 
 
-    console.log(req)
     //if subdomain exists
     const customSubDomain = hostname
       .get('host')

@@ -73,12 +73,6 @@ const ComponentsTab = (props: Props) => {
       id: 'link',
       group: 'elements',
     },
-    {
-    Component: <NavbarPlaceholder />,
-    label: 'Navbar',
-    id: 'navbar',
-    group: 'layout',
-    },
   ]
 
   return (

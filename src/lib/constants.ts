@@ -223,8 +223,11 @@ export type EditorBtns =
   | 'image'
   | null
   | '3Col'
-  | 'navbar'
-  | 'portfolio-1'
+  | 'contactForm-1'
+  | 'navbar-1'
+  | 'hero-1'
+  | 'features-1'
+  
 
 export const defaultStyles: React.CSSProperties = {
   backgroundPosition: 'center',

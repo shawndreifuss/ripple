@@ -1,5 +1,5 @@
 'use client'
-import ContactForm from '@/components/forms/contact-form'
+import ContactForm1 from './_components/contact-form-1'
 import { Badge } from '@/components/ui/badge'
 import { toast } from '@/components/ui/use-toast'
 import { EditorBtns } from '@/lib/constants'
@@ -20,7 +20,7 @@ type Props = {
   element: EditorElement
 }
 
-const ContactFormComponent = (props: Props) => {
+const ContactFormCustom = (props: Props) => {
   const { dispatch, state, subaccountId, funnelId, pageDetails } = useEditor()
   const router = useRouter()
 
@@ -71,14 +71,15 @@ const ContactFormComponent = (props: Props) => {
     try {
       const response = await upsertContact({
         ...values,
-        subAccountId: subaccountId,
         phone: values.phone ? values.phone : '',
         message: values.message ? values.message : '',
+        subAccountId: subaccountId,
       })
+      console.log(response)
       //WIP Call trigger endpoint
       await saveActivityLogsNotification({
         agencyId: undefined,
-        description: `A New contact signed up | ${response}`,
+        description: `A New contact signed up | ${response.name}`,
         subaccountId: subaccountId,
       })
       toast({
@@ -99,7 +100,7 @@ const ContactFormComponent = (props: Props) => {
     <div
       style={styles}
       draggable
-      onDragStart={(e) => handleDragStart(e, 'contactForm')}
+      onDragStart={(e) => handleDragStart(e, 'contactForm-1')}
       onClick={handleOnClickBody}
       className={clsx(
         'p-[2px] w-full m-[5px] relative text-[16px] transition-all flex items-center justify-center',
@@ -118,11 +119,16 @@ const ContactFormComponent = (props: Props) => {
             {state.editor.selectedElement.name}
           </Badge>
         )}
-      <ContactForm
-        subTitle="Contact Us"
-        title="We can help you"
-        apiCall={onFormSubmit}
-      />
+     {/* Contact Form Component  */}
+
+
+<ContactForm1
+apiCall={onFormSubmit}
+title='Contact Us'
+
+/>
+
+
       {state.editor.selectedElement.id === props.element.id &&
         !state.editor.liveMode && (
           <div className="absolute bg-primary px-2.5 py-1 text-xs font-bold  -top-[25px] -right-[1px] rounded-none rounded-t-lg !text-white">
@@ -137,4 +143,4 @@ const ContactFormComponent = (props: Props) => {
   )
 }
 
-export default ContactFormComponent
+export default ContactFormCustom

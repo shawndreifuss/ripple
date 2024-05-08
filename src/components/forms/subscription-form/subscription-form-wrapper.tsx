@@ -28,7 +28,6 @@ const SubscriptionFormWrapper = ({ customerId, planExists }: Props) => {
     subscriptionId: string
     clientSecret: string
   }>({ subscriptionId: '', clientSecret: '' })
-console.log('subscription', subscription)
   const options: StripeElementsOptions = useMemo(
     () => ({
       clientSecret: subscription?.clientSecret,

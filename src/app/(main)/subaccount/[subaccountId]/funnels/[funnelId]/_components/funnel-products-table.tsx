@@ -75,8 +75,6 @@ const FunnelProductsTable: React.FC<FunnelProductsTableProps> = ({
         ])
   }
 
-  console.log(products)
-  console.log(liveProducts)
   return (
     <>
       <Table className="bg-card border-[1px] border-border rounded-md">

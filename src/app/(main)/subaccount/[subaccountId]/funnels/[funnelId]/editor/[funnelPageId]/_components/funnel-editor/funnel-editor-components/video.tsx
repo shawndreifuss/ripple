@@ -14,8 +14,6 @@ const VideoComponent = (props: Props) => {
   const { dispatch, state } = useEditor()
   const styles = props.element.styles
 
-  console.log('props.element', props.element)
-
   const handleDragStart = (e: React.DragEvent, type: EditorBtns) => {
     if (type === null) return
     e.dataTransfer.setData('componentType', type)

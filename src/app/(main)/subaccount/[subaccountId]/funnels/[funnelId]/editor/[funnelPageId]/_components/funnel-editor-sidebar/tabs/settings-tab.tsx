@@ -94,6 +94,7 @@ const SettingsTab = (props: Props) => {
         className="px-6 py-0  "
       >
         <AccordionTrigger className="!no-underline">Custom</AccordionTrigger>
+        {/* Link Editor */}
         <AccordionContent>
           {state.editor.selectedElement.type === 'link' &&
             !Array.isArray(state.editor.selectedElement.content) && (
@@ -106,6 +107,334 @@ const SettingsTab = (props: Props) => {
                   value={state.editor.selectedElement.content.href}
                 />
               </div>
+            )}
+        </AccordionContent>
+        {/* Navbar Editor  */}
+        <AccordionContent>
+          {state.editor.selectedElement.type === 'navbar-1' &&
+            !Array.isArray(state.editor.selectedElement.content) && (
+              <>  
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground ">Light Mode Logo</p>
+                <Input
+                  id="logoLight"
+                  placeholder="https:domain.example.com"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.logoLight}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Dark Mode Logo</p>
+                <Input
+                  id="logoDark"
+                  placeholder="https:domain.example.com"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.logoDark}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+              <p className="text-muted-foreground">Website Name</p>
+              <Input
+                id="brand"
+                placeholder="Website Name"
+                onChange={handleChangeCustomValues}
+                value={state.editor.selectedElement.content.brand}
+              />
+            </div>
+            <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Name 1</p>
+                <Input
+                  id="link1"
+                  placeholder="example: Home"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.link1}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Path 1</p>
+                <Input
+                  id="path1"
+                  placeholder="/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.path1}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Name 2</p>
+                <Input
+                  id="link2"
+                  placeholder="example: Home"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.link2}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Path 2</p>
+                <Input
+                  id="path2"
+                  placeholder="/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.path2}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Name 3</p>
+                <Input
+                  id="link3"
+                  placeholder="example: Home"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.link3}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Path 3</p>
+                <Input
+                  id="path3"
+                  placeholder="/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.path3}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Name 4</p>
+                <Input
+                  id="link4"
+                  placeholder="example: Home"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.link4}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Path 4</p>
+                <Input
+                  id="path4"
+                  placeholder="/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.path4}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Name 5</p>
+                <Input
+                  id="link5"
+                  placeholder="example: Home"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.link5}
+                />
+              </div>
+              <div className="flex flex-col gap-2 m-4">
+                <p className="text-muted-foreground">Menu Path 5</p>
+                <Input
+                  id="path5"
+                  placeholder="/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.path5}
+                />
+              </div>
+
+            </>
+            )}
+        </AccordionContent>
+        {/*  Hero Editor */}
+        <AccordionContent>
+          {state.editor.selectedElement.type === 'hero-1' &&
+            !Array.isArray(state.editor.selectedElement.content) && (
+              <>
+              <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">sub Title</p>
+                <Input
+                  id="subtitle"
+                  placeholder="Build Manage Grow"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.subtitle}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Title</p>
+               <Input
+                 id="title"
+                 placeholder="Build Manage Grow"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.title}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Brand</p>
+               <Input
+                 id="brand"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.brand}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Brand</p>
+               <Input
+                 id="brand"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.brand}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Button Text</p>
+               <Input
+                 id="buttonText"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.buttonText}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Button Link</p>
+               <Input
+                 id="buttonLink"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.buttonLink}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Button Text 2</p>
+               <Input
+                 id="buttonText"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.buttonText}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Button Link 2</p>
+               <Input
+                 id="buttonLink"
+                 placeholder="Ripple."
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.buttonLink}
+               />
+             </div>
+             </>
+            )}
+        </AccordionContent>
+        {/* Features Editor */}
+        <AccordionContent>
+          {state.editor.selectedElement.type === 'features-1' &&
+            !Array.isArray(state.editor.selectedElement.content) && (
+              <>
+              <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 1 Title</p>
+                <Input
+                  id="fTitle1"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 1 Description</p>
+               <Input
+                 id="fDescription1"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription1}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 2 Title</p>
+                <Input
+                  id="fTitle2"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 2 Description</p>
+               <Input
+                 id="fDescription2"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription2}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 3 Title</p>
+                <Input
+                  id="fTitle3"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 3 Description</p>
+               <Input
+                 id="fDescription3"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription3}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 4 Title</p>
+                <Input
+                  id="fTitle4"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 4 Description</p>
+               <Input
+                 id="fDescription4"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription4}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 5 Title</p>
+                <Input
+                  id="fTitle5"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 5 Description</p>
+               <Input
+                 id="fDescription5"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription5}
+               />
+             </div>
+             <div className="flex flex-col gap-2">
+                <p className="text-muted-foreground">Feature 6 Title</p>
+                <Input
+                  id="fTitle6"
+                  placeholder="https:domain.example.com/pathname"
+                  onChange={handleChangeCustomValues}
+                  value={state.editor.selectedElement.content.fTitle1}
+                />
+              </div>
+               <div className="flex flex-col gap-2">
+               <p className="text-muted-foreground">Feature 6 Description</p>
+               <Input
+                 id="fDescription6"
+                 className='h-20'
+                 placeholder="https:domain.example.com/pathname"
+                 onChange={handleChangeCustomValues}
+                 value={state.editor.selectedElement.content.fDescription6}
+               />
+             </div>
+             </>
             )}
         </AccordionContent>
       </AccordionItem>

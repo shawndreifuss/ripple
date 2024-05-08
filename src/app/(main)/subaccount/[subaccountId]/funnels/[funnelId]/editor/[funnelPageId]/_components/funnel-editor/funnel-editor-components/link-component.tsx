@@ -63,12 +63,17 @@ const LinkComponent = (props: Props) => {
             {state.editor.selectedElement.name}
           </Badge>
         )}
+
+
       {!Array.isArray(props.element.content) &&
         (state.editor.previewMode || state.editor.liveMode) && (
           <Link href={props.element.content.href || '#'}>
             {props.element.content.innerText}
           </Link>
         )}
+
+
+
       {!state.editor.previewMode && !state.editor.liveMode && (
         <span
           contentEditable={!state.editor.liveMode}
@@ -91,6 +96,9 @@ const LinkComponent = (props: Props) => {
             props.element.content.innerText}
         </span>
       )}
+
+
+      
       {state.editor.selectedElement.id === props.element.id &&
         !state.editor.liveMode && (
           <div className="absolute bg-primary px-2.5 py-1 text-xs font-bold  -top-[25px] -right-[1px] rounded-none rounded-t-lg !text-white">

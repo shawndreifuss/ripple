@@ -40,7 +40,7 @@ export default async function Home() {
         <CTA />
         <Testimonial />
         <Pricing />
-        <Contact/>
+        <Contact />
         <Footer />
 
     </main>

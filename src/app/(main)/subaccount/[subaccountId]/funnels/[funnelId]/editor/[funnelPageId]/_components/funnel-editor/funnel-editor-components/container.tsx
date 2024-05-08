@@ -105,6 +105,21 @@ const Container = ({ element }: Props) => {
           },
         })
         break
+        case 'contactForm-1':
+          dispatch({
+            type: 'ADD_ELEMENT',
+            payload: {
+              containerId: id,
+              elementDetails: {
+                content: [],
+                id: v4(),
+                name: 'Contact Form 1',
+                styles: {},
+                type: 'contactForm-1',
+              },
+            },
+          })
+          break
       case 'paymentForm':
         dispatch({
           type: 'ADD_ELEMENT',
@@ -187,45 +202,78 @@ const Container = ({ element }: Props) => {
           },
         })
         break
-        case 'navbar':
+        case 'navbar-1':
         dispatch({
           type: 'ADD_ELEMENT',
           payload: {
             containerId: id,
             elementDetails: {
-              content: {
-                brand: 'Plutonium',
-                link1: '/',
-                link2: '/blogs',
-                link3: '/about-us',
-                link4: '/contact-us',
-                
-              },
-              id: v4(),
-              name: 'navbar',
-              styles: {},
-              type: 'navbar',
-            },
-          },
-        })
-        break
-        case 'portfolio-1':
-        dispatch({
-          type: 'ADD_ELEMENT',
-          payload: {
-            containerId: id,
-            elementDetails: {
+              
               content: {
                 
               },
               id: v4(),
-              name: 'portfolio-1',
+              name: 'navbar-1',
               styles: {},
-              type: 'portfolio-1',
+              type: 'navbar-1',
             },
           },
         })
         break
+        case 'hero-1':
+          dispatch({
+            type: 'ADD_ELEMENT',
+            payload: {
+              containerId: id,
+              elementDetails: {
+                content: {
+                  title: 'Empower Your Agency',
+                  description: 'Your SaaS with Built-in Integrations: Auth, Database,Blog & More - Next-Gen Tech Stack for Seamless SaaS Development: Next.js 13, React 18, TypeScript - This rephrase emphasizes the modern technologies used in Solid Pro.',
+                  buttonText: 'Get Started',
+                  buttonLink: '#',
+                  buttonText2: 'Contact Us',
+                  buttonLink2: '#',
+                  heroImage: '/images/hero/hero-light.svg',
+                  brand: 'Ripple',
+
+                },
+                id: v4(),
+                name: 'hero-1',
+                styles: {},
+                type: 'hero-1',
+              },
+            },
+          })
+          break
+          case 'features-1':
+          dispatch({
+            type: 'ADD_ELEMENT',
+            payload: {
+              containerId: id,
+              elementDetails: {
+                content: {
+                  fTitle1: 'Empower Your Agency',
+                  fDescription1: 'Your SaaS with Built-in Integrations: Auth, Database,Blog & More - Next-Gen Tech Stack for Seamless SaaS Development: Next.js 13, React 18, TypeScript - This rephrase emphasizes the modern technologies used in Solid Pro.',
+                  fTitle2: "High-quality Design",
+                  fDescription2: "Create a beautiful and user-friendly interface that keeps your users engaged.  ",
+                  fTitle3: "Next.js 13 + TypeScript",
+                  fDescription3: "Deliver lightning-fast, scalable SaaS with Next.js 13, TypeScript, and a focus on clean code.",
+                  fTitle4: "Sanity Blog and Docs",
+                  fDescription4: "Effortlessly manage your blog, docs, and content with Sanity's powerful CMS pre-integrated into Ripple Pro",
+                  fTitle5: "DB, Auth and Stripe",
+                  fDescription5:"Stay ahead of the curve: Ripple Pro receives regular free updates with new features and bug fixes.",
+                  fTitle6: "Regular Free Updates",
+                  fDescription6:"Stay ahead of the curve: Ripple Pro receives regular free updates with new features and bug fixes.",
+           
+                },
+                id: v4(),
+                name: 'features-1',
+                styles: {},
+                type: 'features-1',
+              },
+            },
+          })
+          break
     }
   }
 
@@ -308,7 +356,7 @@ const Container = ({ element }: Props) => {
       {state.editor.selectedElement.id === element.id &&
         !state.editor.liveMode &&
         state.editor.selectedElement.type !== '__body' && (
-          <div className="absolute bg-primary px-2.5 py-1 text-xs font-bold cursor-pointer  -top-[25px] -right-[1px] rounded-none rounded-t-lg ">
+          <div className="absolute dark:bg-gray-900 bg-primary px-2.5 py-1 text-xs font-bold cursor-pointer  -top-[25px] -right-[1px] rounded-none rounded-t-lg ">
             <Trash
               size={16}
               onClick={handleDeleteElement}

@@ -11,11 +11,44 @@ export type EditorElement = {
   styles: React.CSSProperties;
   name: string;
   type: EditorBtns;
+  link1?: string;
+  link2?: string;
+  link3?: string;
+  link4?: string;
+  link5?: string;
+  path1?: string;
+  path2?: string;
+  path3?: string;
+  path4?: string;
+  path5?: string;
+  logoLight?: string;
+  logoDark?: string;
+  brand?: string;
+  headerLogo?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  buttonText2?: string;
+  buttonLink2?: string;
+  heroImage?: string;
+  fTitle1?: string;
+  fTitle2?: string;
+  fTitle3?: string;
+  fTitle4?: string;
+  fTitle5?: string;
+  fTitle6?: string;
+  fDescription1?: string;
+  fDescription2?: string;
+  fDescription3?: string;
+  fDescription4?: string;
+  fDescription5?: string;
+  fDescription6?: string;
+
   content:
     | EditorElement[]
     | {
         href?: string;
-        brand?: string;
         innerText?: string;
         src?: string;
         link1?: string;
@@ -23,8 +56,35 @@ export type EditorElement = {
         link3?: string;
         link4?: string;
         link5?: string;
-        logo?: string;
-
+        path1?: string;
+        path2?: string;
+        path3?: string;
+        path4?: string;
+        path5?: string;
+        logoLight?: string;
+        logoDark?: string;
+        brand?: string;
+        headerLogo?: string;
+        title?: string;
+        subtitle?: string;
+        description?: string;
+        buttonText?: string;
+        buttonLink?: string;
+        buttonText2?: string;
+        buttonLink2?: string;
+        heroImage?: string;
+        fTitle1?: string;
+  fTitle2?: string;
+  fTitle3?: string;
+  fTitle4?: string;
+  fTitle5?: string;
+  fTitle6?: string;
+  fDescription1?: string;
+  fDescription2?: string;
+  fDescription3?: string;
+  fDescription4?: string;
+  fDescription5?: string;
+  fDescription6?: string;
       };
 };
 

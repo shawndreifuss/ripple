@@ -9,6 +9,15 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 import { db } from '@/lib/db'
 import { Contact, SubAccount, Ticket } from '@prisma/client'
 import format from 'date-fns/format'
@@ -49,6 +58,7 @@ const ContactPage = async ({ params }: Props) => {
 
   const allContacts = contacts.Contact
 
+
   const formatTotal = (tickets: Ticket[]) => {
     if (!tickets || !tickets.length) return '$0.00'
     const amt = new Intl.NumberFormat(undefined, {
@@ -81,41 +91,51 @@ const ContactPage = async ({ params }: Props) => {
   </BreadcrumbList>
 </Breadcrumb>
       <Separator className=" my-6" />
-      <div className='flex w-full justify-start align-center p-1 mb-2'>
+      <div className='flex w-full justify-start align-center p-1 mb-4'>
       <CraeteContactButton subaccountId={params.subaccountId} />
       </div>
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[200px]">Name</TableHead>
-            <TableHead className="w-[300px]">Email</TableHead>
-            <TableHead className="w-[200px]">Active</TableHead>
+            <TableHead className="w-1/7">Name</TableHead>
+            <TableHead className="w-1/7">Phone</TableHead>
+            <TableHead className="w-1/7">Email</TableHead>
+            <TableHead className="w-1/7">Message</TableHead>
             <TableHead>Created Date</TableHead>
-            <TableHead className="text-right">Total Value</TableHead>
+            <TableHead className="w-1/7">Total Value</TableHead>
+            <TableHead className="w-1/7">Active</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="font-medium truncate">
+        <TableBody className="font-medium truncate ">
           {allContacts.map((contact) => (
             <TableRow key={contact.id}>
               <TableCell>
-                <Avatar>
-                  <AvatarImage alt="@shadcn" />
-                  <AvatarFallback className="bg-primary text-white">
-                    {contact.name.slice(0, 2).toUpperCase()}
-                  </AvatarFallback>
-                </Avatar>
+                {contact?.name}
               </TableCell>
-              <TableCell>{contact.email}</TableCell>
+              <TableCell>{contact?.phone}</TableCell>
+              <TableCell>{contact?.email}</TableCell>
+              <TableCell>
+              <DropdownMenu>
+  <DropdownMenuTrigger>view</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>Message</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>{contact.message}</DropdownMenuItem>
+   
+  </DropdownMenuContent>
+</DropdownMenu>
+              </TableCell>
+
+              <TableCell>{format(contact.createdAt, 'MM/dd/yyyy')}</TableCell>
+              <TableCell className="">
+                {formatTotal(contact.Ticket)}
+              </TableCell>
               <TableCell>
                 {formatTotal(contact.Ticket) === '$0.00' ? (
                   <Badge variant={'destructive'}>Inactive</Badge>
                 ) : (
                   <Badge className="bg-emerald-700">Active</Badge>
                 )}
-              </TableCell>
-              <TableCell>{format(contact.createdAt, 'MM/dd/yyyy')}</TableCell>
-              <TableCell className="text-right">
-                {formatTotal(contact.Ticket)}
               </TableCell>
             </TableRow>
           ))}
