@@ -11,7 +11,6 @@ const Pricing = async () => {
     product: process.env.NEXT_PLURA_PRODUCT_ID,
     active: true,
   })
-  console.log(prices.data)
   return (
     <>
 

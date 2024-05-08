@@ -3,7 +3,6 @@ import { useTheme} from "next-themes";
 
 const DarkModeSwitcher = () => {
   const { theme, setTheme } = useTheme(); 
-  console.log(theme)
 
   return (
     <li className="list-none">

@@ -60,7 +60,7 @@ const Features1 = (props: Props) => {
 
   const { dispatch, state } = useEditor()
   const [mounted, setMounted] = useState(false);
-console.log({props})
+
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
