@@ -1,101 +1,237 @@
-import SidebarLink from "@/components/Docs/SidebarLink";
-import { Metadata } from "next";
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Modal } from '@/components/Docs/modal';
 
-export const metadata: Metadata = {
-  title: "Docs Page - Ripple Saas",
-  description: "This is Docs page for Ripple",
-  
+const ReadmePage = () => {
+  return (
+    
+
+<body>
+  <header className=" w-screen z-50 sticky mt-30 top-20 pt-10 flex items-center justify-between px-3 py-2 border-b shadow-lg bg-white/90 backdrop-blur-sm border-slate-400/40">
+    
+  <div className='flex w-full justify-center pb-10'> 
+    <form action="https://duckduckgo.com/" className="md:w-80 lg:w-96">
+      <span className="relative flex items-center group">
+        <svg aria-hidden="true" viewBox="0 0 20 20" className="absolute w-4 h-4 ml-3 fill-slate-400 group-hover:fill-slate-500 group-focus:fill-slate-500"><path d="M16.293 17.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM9 14a5 5 0 0 1-5-5H2a7 7 0 0 0 7 7v-2ZM4 9a5 5 0 0 1 5-5V2a7 7 0 0 0-7 7h2Zm5-5a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7v2Zm8.707 12.293-3.757-3.757-1.414 1.414 3.757 3.757 1.414-1.414ZM14 9a4.98 4.98 0 0 1-1.464 3.536l1.414 1.414A6.98 6.98 0 0 0 16 9h-2Zm-1.464 3.536A4.98 4.98 0 0 1 9 14v2a6.98 6.98 0 0 0 4.95-2.05l-1.414-1.414Z"></path></svg>
+        <input type="text" name="q" placeholder="Search docs…" className="w-full py-2 pl-10 pr-2 border rounded bg-slate-100 placeholder-slate-400 text-slate-800 border-slate-100 outline outline-offset-2 outline-2 outline-transparent hover:border-slate-200 focus:border-slate-200 focus:outline-slate-600" />
+      </span>
+      <input type="hidden" name="sites" value="spinalcms.com"/>
+      <input type="submit" value="Search" className="sr-only" />
+    </form>
+    </div>
+  </header>
+
+  <div className="relative mt-20 flex justify-center mx-auto max-w-8xl sm:px-2 lg:px-8 xl:px-12">
+    <label htmlFor="navigation" className="fixed bottom-0 left-0 z-50 flex items-center justify-center w-12 h-12 mb-4 ml-4 bg-white border rounded-full shadow-lg cursor-pointer text-slate-600 border-slate-300 lg:hidden transition duration-200 ease-in-out active:scale-95">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+      </svg>
+    </label>
+
+    <input type="checkbox" name="navigation" id="navigation" className="hidden peer" />
+    <div className="sticky top-20 h-screen shadow-xl px-4 left-0 hidden peer-checked:block lg:relative lg:top-0 lg:h-auto lg:px-0 lg:block lg:flex-none lg:shadow-none">
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[50vw] bg-white lg:bg-slate-50"></div>
+
+      <nav className="sticky top-40 w-64 pr-8 text-base lg:text-sm xl:w-72 xl:pr-16">
+        <ul role="list" className="-ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-7 pl-0.5 space-y-8">
+          <li>
+            <h3 className="font-semibold tracking-tight text-slate-900">
+              Getting started
+            </h3>
+
+            <ul role="list" className="pl-3 mt-3 space-y-2">
+              <li>
+                <a href="#" className="text-slate-900 hover:text-slate-800">
+                  Quick start guide
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="text-slate-600 hover:text-slate-800">
+                  How does Ripple work?
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h3 className="font-semibold tracking-tight text-slate-900">
+              Content Types
+            </h3>
+
+            <ul role="list" className="pl-3 mt-3 space-y-2">
+              <li>
+                <a href="#" className="text-slate-600 hover:text-slate-800">
+                  What are content types?
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="text-slate-600 hover:text-slate-800">
+                  Create and edit content types
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h3 className="font-semibold tracking-tight text-slate-900">
+              Content
+            </h3>
+
+            <ul role="list" className="pl-3 mt-3 space-y-2">
+              <li>
+                <a href="#" className="text-slate-600 hover:text-slate-800">
+                  What kind of content can I create and edit?
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="text-slate-600 hover:text-slate-800">
+                  Previewing content
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div className="flex-auto max-w-2xl min-w-0 px-4 py-10 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+      <article className="">
+        <header className="">
+          <p className="text-base font-medium text-slate-500">
+            Getting started
+          </p>
+
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            Quick start guide
+          </h1>
+        </header>
+
+        <p className="mt-2 text-xl text-slate-600">
+          Need to get started quickly with Spinal? You will learn all the basics in just minutes.
+        </p>
+    
+        <a href="#" id='modal' className="flex flex-col w-full mt-4 overflow-hidden rounded-lg shadow-xl md:flex-row md:w-4/5">
+          <div className="flex relative items-center justify-center w-full px-4 py-30 text-sm font-normal md:w-1/3 text-slate-900/20 bg-gradient-to-br from-indigo-200 via-sky-100 to-indigo-100">
+            
+             
+              <Modal  />
+             
+            
+           <Image src={'/assets/vid.png'} alt=''  className='absolute w-full ' width={1200} height={800} />
+           <Image src={'/assets/play-btn.png'} alt='' className='absolute w-20 opacity-6' width={100} height={100} />
+            <Image className='absolute' width={200} height={400} src='/assets/light-logo.jpeg' alt=''/>
+            
+          </div>
+
+          <div className="w-full px-6 py-4 flex flex-col justify-center align-center border-t border-b border-r md:w-2/3 border-slate-200">
+            <h3 className="text-xl  font-semibold tracking-tight text-slate-900">
+              Video walkthrough
+            </h3>
+
+            <p className="mt-1 text-lg text-slate-600">
+              Watch this 5 minutes video-walkthrough of Ripple. You quickly learn how to set up your dashboard, invite team members, set permissions and how to schedule and publish content.
+            </p>
+          </div>
+        </a>
+
+        <h3 className="mt-16 text-base font-bold tracking-tight text-slate-900">
+          Get set up quickly
+        </h3>
+
+        <ul className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <li>
+            <a href="#" className="block px-6 py-4 border rounded bg-slate-50 border-slate-100 hover:bg-white">
+              <h4 className="font-bold tracking-tight text-slate-900">
+                Connect your GitHub account
+              </h4>
+
+              <p className="text-slate-600">
+                What you need to know before connecting your GitHub account
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" className="block px-6 py-4 border rounded bg-slate-50 border-slate-100 hover:bg-white">
+              <h4 className="font-bold tracking-tight text-slate-900">
+                Add your first content type
+              </h4>
+
+              <p className="text-slate-600">
+                Learn what content types are in Ripple!
+              </p>
+            </a>
+          </li>
+
+          <li className="">
+            <a href="#" className="block px-6 py-4 border rounded bg-slate-50 border-slate-100 hover:bg-white">
+              <h4 className="font-bold tracking-tight text-slate-900">
+                Invite your first team member
+              </h4>
+
+              <p className="text-slate-600">
+                You write your best marketing content with your team
+              </p>
+            </a>
+          </li>
+
+          <li className="">
+            <a href="#" className="block px-6 py-4 border rounded bg-slate-50 border-slate-100 hover:bg-white">
+              <h4 className="font-bold tracking-tight text-slate-900">
+                Publish your content
+              </h4>
+
+              <p className="text-slate-600">
+                Publishing with Ripple is really just one click of a button
+              </p>
+            </a>
+          </li>
+        </ul>
+
+        <h3 className="mt-8 text-base font-bold tracking-tight text-slate-900">
+          Have questions?
+        </h3>
+
+        <p className="text-slate-900">
+          Still have questions? <a href="mailto:ripple@hello.com" className="underline hover:no-underline">Talk to support</a>.
+        </p>
+      </article>
+
+      <dl className="flex pt-6 mt-6 border-t border-slate-200">
+         <div className="mr-auto text-left"> 
+           <dt className="text-sm font-normal tracking-tight text-slate-600"> 
+             Previous 
+           </dt> 
+
+           <dd className="mt-1"> 
+             <a href="#" className="text-base font-semibold text-slate-900 hover:underline"> 
+                Ripple
+             </a> 
+           </dd> 
+         </div> 
+
+        <div className="ml-auto text-right">
+          <dt className="text-sm font-normal tracking-tight text-slate-600">
+            Next
+          </dt>
+
+          <dd className="mt-1">
+            <a href="#" className="text-base font-semibold text-slate-900 hover:underline">
+              How does Ripple work?
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</body>
+
+   
+  );
 };
 
-export default function DocsPage() {
-  return (
-    <>
-      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-        <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-1/4">
-              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
-                <ul className="space-y-2">
-                  <SidebarLink />
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 lg:w-3/4">
-              <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h1>Welcome to Ripple Documentation</h1>
-
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  This document serves as a simple template to showcase a sample
-                  layout and format. It is solely created for demonstration
-                  purposes and is not intended for any official use.
-                </p>
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  Please visit:{" "}
-                  <b>
-                    <a href="https://github.com/shawndreifuss">
-                    https://github.com/shawndreifuss
-                    </a>
-                  </b>{" "}
-                  to check out the real docs, setup guide and even video
-                  instructions
-                </p>
-                <br /><br /><br />
-                <p>
-    <div className="container mx-auto py-8 px-4">
-      <section>
-        <h2 className="text-2xl font-bold mb-2">Getting Started</h2>
-        <p className="mb-4">
-          Welcome to Ripple, your all-in-one solution for building and managing your SaaS applications.
-          Below are the steps to get started with Ripple.
-        </p>
-        <ol className="list-decimal pl-4">
-          <li>Install Prisma:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install @prisma/cli
-          </code>
-          <li>Install Bun:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install @bun/client
-          </code>
-          <li>Install Stripe:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install stripe
-          </code>
-          <li>Install Clerk:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install @clerk/clerk-sdk-node
-          </code>
-          <li>Install Tailwind CSS:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install tailwindcss
-          </code>
-          <li>Install Next.js:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install next
-          </code>
-          <li>Install Vercel:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install -g vercel
-          </code>
-          <li>Install TypeScript:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            bun install typescript
-          </code>
-          <li>Install Upload Thing:</li>
-          <code className="block bg-gray-100 p-2 rounded-md mb-2">
-            npm install upload-thing
-          </code>
-        </ol>
-      </section>
-    </div>
-</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
+export default ReadmePage;
