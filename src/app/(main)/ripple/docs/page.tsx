@@ -8,13 +8,13 @@ const ReadmePage = () => {
     
 
 <body>
-  <header className=" w-screen z-50 sticky mt-30 top-20 pt-10 flex items-center justify-between px-3 py-2 border-b shadow-lg bg-white/90 backdrop-blur-sm border-slate-400/40">
+  <header className=" w-screen z-50 sticky mt-30 top-20 pt-10 flex items-center justify-between px-3 py-2 border-b shadow-lg bg-white/90 backdrop-blur-lg border-slate-400/40 dark:bg-primary/10">
     
   <div className='flex w-full justify-center pb-10'> 
     <form action="https://duckduckgo.com/" className="md:w-80 lg:w-96">
       <span className="relative flex items-center group">
-        <svg aria-hidden="true" viewBox="0 0 20 20" className="absolute w-4 h-4 ml-3 fill-slate-400 group-hover:fill-slate-500 group-focus:fill-slate-500"><path d="M16.293 17.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM9 14a5 5 0 0 1-5-5H2a7 7 0 0 0 7 7v-2ZM4 9a5 5 0 0 1 5-5V2a7 7 0 0 0-7 7h2Zm5-5a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7v2Zm8.707 12.293-3.757-3.757-1.414 1.414 3.757 3.757 1.414-1.414ZM14 9a4.98 4.98 0 0 1-1.464 3.536l1.414 1.414A6.98 6.98 0 0 0 16 9h-2Zm-1.464 3.536A4.98 4.98 0 0 1 9 14v2a6.98 6.98 0 0 0 4.95-2.05l-1.414-1.414Z"></path></svg>
-        <input type="text" name="q" placeholder="Search docs…" className="w-full py-2 pl-10 pr-2 border rounded bg-slate-100 placeholder-slate-400 text-slate-800 border-slate-100 outline outline-offset-2 outline-2 outline-transparent hover:border-slate-200 focus:border-slate-200 focus:outline-slate-600" />
+        <svg aria-hidden="true" viewBox="0 0 20 20" className="dark:bg-primary/10 absolute w-4 h-4 ml-3 fill-slate-400 group-hover:fill-slate-500 group-focus:fill-slate-500"><path d="M16.293 17.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM9 14a5 5 0 0 1-5-5H2a7 7 0 0 0 7 7v-2ZM4 9a5 5 0 0 1 5-5V2a7 7 0 0 0-7 7h2Zm5-5a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7v2Zm8.707 12.293-3.757-3.757-1.414 1.414 3.757 3.757 1.414-1.414ZM14 9a4.98 4.98 0 0 1-1.464 3.536l1.414 1.414A6.98 6.98 0 0 0 16 9h-2Zm-1.464 3.536A4.98 4.98 0 0 1 9 14v2a6.98 6.98 0 0 0 4.95-2.05l-1.414-1.414Z"></path></svg>
+        <input type="text" name="q" placeholder="Search docs…" className="w-full py-2 pl-10 pr-2 border dark:bg-primary/30 rounded bg-slate-100 placeholder-slate-400 text-slate-800 dark:text-white border-slate-100 outline outline-offset-2 outline-2 outline-transparent hover:border-slate-200 focus:border-slate-200 focus:outline-slate-600" />
       </span>
       <input type="hidden" name="sites" value="spinalcms.com"/>
       <input type="submit" value="Search" className="sr-only" />
@@ -31,7 +31,7 @@ const ReadmePage = () => {
 
     <input type="checkbox" name="navigation" id="navigation" className="hidden peer" />
     <div className="sticky top-20 h-screen shadow-xl px-4 left-0 hidden peer-checked:block lg:relative lg:top-0 lg:h-auto lg:px-0 lg:block lg:flex-none lg:shadow-none">
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[50vw] bg-white lg:bg-slate-50"></div>
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[50vw] dark:bg- bg-white lg:bg-slate-50"></div>
 
       <nav className="sticky top-40 w-64 pr-8 text-base lg:text-sm xl:w-72 xl:pr-16">
         <ul role="list" className="-ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-7 pl-0.5 space-y-8">
