@@ -28,7 +28,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="CREATE A RIPPLE!"
-                paragraph="We know its been done before, We aren't trying to! We know what works and we want to be better. We all need to be better! Build the best version of yourself and change the world!"  
+                paragraph="Coming soon video walkthrough of how easy it is to begin!"  
                 mb="44px"
               />
 
