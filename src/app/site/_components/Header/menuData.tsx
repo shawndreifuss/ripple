@@ -21,7 +21,7 @@ const menuData: Menu[] = [
   },
   {
     id: 31,
-          title: "Blog",
+          title: "More Apps by Ripple",
           newTab: false,
           path: "/ripple/blogs",
       },

@@ -14,26 +14,27 @@ type Blog = {
   }; 
   tags: string[];
   publishDate: string;
+  link?: string;
 };
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate, slug } = blog;
+  const { title, image, paragraph, author, tags, publishDate, slug, link } = blog;
   return (
     <>
       <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
         <Link
-          href={`/ripple/blogs/${slug}`}
+          href={`${link}`}
           className="relative block aspect-[27/27] w-full"
         >
           <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
             {tags[0]}
           </span>
-          <Image src={image} alt="image" fill />
+          <Image src={image} alt="image" fill className="bg-[url('https://t4.ftcdn.net/jpg/05/37/17/23/360_F_537172399_Ny1BmnwexaWB3qtRczLgJ8UcdsG4eyXj.jpg')] " />
         </Link>
         <div className="dark:bg-background p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
           <h3>
             <Link
-              href={`/ripple/blogs/${slug}`}
+              href={`${link}`}
               className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
             >
               {title}
