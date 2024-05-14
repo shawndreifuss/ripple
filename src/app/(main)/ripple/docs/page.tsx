@@ -49,7 +49,7 @@ const ReadmePage = () => {
 
               <li>
                 <a href="#" className="text-slate-600 hover:text-slate-800">
-                  How does Ripple work?
+                  How does RippleEffect work?
                 </a>
               </li>
             </ul>
@@ -123,7 +123,7 @@ const ReadmePage = () => {
             
            <Image src={'/assets/vid.png'} alt=''  className='absolute w-full ' width={1200} height={800} />
            <Image src={'/assets/play-btn.png'} alt='' className='absolute w-20 opacity-6' width={100} height={100} />
-            <Image className='absolute' width={200} height={400} src='/assets/light-logo.jpeg' alt=''/>
+            <Image className='absolute' width={200} height={400} src='/assets/light-logo.png' alt=''/>
             
           </div>
 
@@ -133,7 +133,7 @@ const ReadmePage = () => {
             </h3>
 
             <p className="mt-1 text-lg text-slate-600">
-              Watch this 5 minutes video-walkthrough of Ripple. You quickly learn how to set up your dashboard, invite team members, set permissions and how to schedule and publish content.
+              Watch this 5 minutes video-walkthrough of RippleEffect. You quickly learn how to set up your dashboard, invite team members, set permissions and how to schedule and publish content.
             </p>
           </div>
         </a>
@@ -162,7 +162,7 @@ const ReadmePage = () => {
               </h4>
 
               <p className="text-slate-600">
-                Learn what content types are in Ripple!
+                Learn what content types are in RippleEffect!
               </p>
             </a>
           </li>
@@ -186,7 +186,7 @@ const ReadmePage = () => {
               </h4>
 
               <p className="text-slate-600">
-                Publishing with Ripple is really just one click of a button
+                Publishing with RippleEffect is really just one click of a button
               </p>
             </a>
           </li>
@@ -197,7 +197,7 @@ const ReadmePage = () => {
         </h3>
 
         <p className="text-slate-900">
-          Still have questions? <a href="mailto:ripple@hello.com" className="underline hover:no-underline">Talk to support</a>.
+          Still have questions? <a href="mailto:RippleEffect@hello.com" className="underline hover:no-underline">Talk to support</a>.
         </p>
       </article>
 
@@ -209,7 +209,7 @@ const ReadmePage = () => {
 
            <dd className="mt-1"> 
              <a href="#" className="text-base font-semibold text-slate-900 hover:underline"> 
-                Ripple
+             RippleEffect
              </a> 
            </dd> 
          </div> 
@@ -221,7 +221,7 @@ const ReadmePage = () => {
 
           <dd className="mt-1">
             <a href="#" className="text-base font-semibold text-slate-900 hover:underline">
-              How does Ripple work?
+              How does RippleEffect work?
             </a>
           </dd>
         </div>

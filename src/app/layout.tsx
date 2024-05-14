@@ -9,10 +9,10 @@ import { Toaster as SonnarToaster } from '@/components/ui/sonner'
 const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Ripple',
+  title: 'RippleEffect',
   description: 'All in one Agency Solution',
   viewport: 'width=device-width, initial-scale=1',
-  keywords: ['Ripple', 'Agency', 'Solution'],
+  keywords: ['RippleEffect', 'Agency', 'Solution'],
 
 }
 

@@ -262,7 +262,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Brand</p>
                <Input
                  id="brand"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.brand}
                />
@@ -271,7 +271,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Brand</p>
                <Input
                  id="brand"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.brand}
                />
@@ -280,7 +280,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Button Text</p>
                <Input
                  id="buttonText"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.buttonText}
                />
@@ -289,7 +289,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Button Link</p>
                <Input
                  id="buttonLink"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.buttonLink}
                />
@@ -298,7 +298,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Button Text 2</p>
                <Input
                  id="buttonText"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.buttonText}
                />
@@ -307,7 +307,7 @@ const SettingsTab = (props: Props) => {
                <p className="text-muted-foreground">Button Link 2</p>
                <Input
                  id="buttonLink"
-                 placeholder="Ripple."
+                 placeholder="RippleEffect."
                  onChange={handleChangeCustomValues}
                  value={state.editor.selectedElement.content.buttonLink}
                />

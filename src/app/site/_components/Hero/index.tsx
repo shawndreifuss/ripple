@@ -77,10 +77,10 @@ const Hero = () => {
                   height={21.66}
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
-                <div className=" relative aspect-[700/444] w-full">
+                <div className=" relative aspect-[800/444] w-full">
                   <Image
                     className="shadow-solid-l dark:hidden"
-                    src="/images/hero/hero-light.svg"
+                    src="/assets/img-1.png"
                     alt="Hero"
                     fill
                   />

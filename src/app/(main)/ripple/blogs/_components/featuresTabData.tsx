@@ -7,37 +7,37 @@ type FeatureTab = {
   const featuresTabData: FeatureTab[] = [
     {
       id: "tabOne",
-      title: "Ripple ",
+      title: "RippleEffect ",
      
     },
     {
       id: "tabTwo",
-      title: "Ripple",
+      title: "RippleEffect",
       
     },
     {
       id: "tabThree",
-      title: "Ripple",
+      title: "RippleEffect",
       
     },
     {
         id: "tabFour",
-        title: "Ripple ",
+        title: "RippleEffect ",
        
       },
       {
         id: "tabFive",
-        title: "Ripple",
+        title: "RippleEffect",
         
       },
       {
         id: "tabSix",
-        title: "Ripple",
+        title: "RippleEffect",
         
       },
       {
         id: "tabSeven",
-        title: "Ripple",
+        title: "RippleEffect",
         
       },
       

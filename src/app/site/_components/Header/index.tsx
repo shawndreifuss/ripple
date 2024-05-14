@@ -42,23 +42,26 @@ const Header =  ({ user } : Props) => {
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          <Link href="/" >
+          <Link href="/" className="flex justify-around align-center text-center" >
+           
             <Image
-              src="/assets/dark-logo.jpeg"
+              src="/assets/dark-logo.png"
               alt="logo"
               width={119.03}
               height={10}
               className="hidden  scale-150 dark:block"
             />
             <Image
-              src="/assets/light-logo.jpeg"
+              src="/assets/light-logo.png"
               alt="logo"
               width={119.03}
               height={10}
               className=" dark:hidden scale-150"
-            />
+            /> 
+            <h2 className="flex align-center m-auto text-[2rem] pr-64"><span>RippleEffect</span> </h2>
           </Link>
           {/* <!-- Hamburger Toggle BTN --> */}
+         
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"

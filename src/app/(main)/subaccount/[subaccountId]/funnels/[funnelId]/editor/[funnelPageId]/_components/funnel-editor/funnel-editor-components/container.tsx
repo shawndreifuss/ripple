@@ -234,7 +234,7 @@ const Container = ({ element }: Props) => {
                   buttonText2: 'Contact Us',
                   buttonLink2: '#',
                   heroImage: '/images/hero/hero-light.svg',
-                  brand: 'Ripple',
+                  brand: 'RippleEffect',
 
                 },
                 id: v4(),
@@ -259,11 +259,11 @@ const Container = ({ element }: Props) => {
                   fTitle3: "Next.js 13 + TypeScript",
                   fDescription3: "Deliver lightning-fast, scalable SaaS with Next.js 13, TypeScript, and a focus on clean code.",
                   fTitle4: "Sanity Blog and Docs",
-                  fDescription4: "Effortlessly manage your blog, docs, and content with Sanity's powerful CMS pre-integrated into Ripple Pro",
+                  fDescription4: "Effortlessly manage your blog, docs, and content with Sanity's powerful CMS pre-integrated into RippleEffect Pro",
                   fTitle5: "DB, Auth and Stripe",
-                  fDescription5:"Stay ahead of the curve: Ripple Pro receives regular free updates with new features and bug fixes.",
+                  fDescription5:"Stay ahead of the curve: RippleEffect Pro receives regular free updates with new features and bug fixes.",
                   fTitle6: "Regular Free Updates",
-                  fDescription6:"Stay ahead of the curve: Ripple Pro receives regular free updates with new features and bug fixes.",
+                  fDescription6:"Stay ahead of the curve: RippleEffect Pro receives regular free updates with new features and bug fixes.",
            
                 },
                 id: v4(),

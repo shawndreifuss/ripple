@@ -59,7 +59,7 @@ const Tabs = () => {
               
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-[rem]">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -73,7 +73,7 @@ const Tabs = () => {
             >
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-regular">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -87,7 +87,7 @@ const Tabs = () => {
             >
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-regular">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -102,7 +102,7 @@ const Tabs = () => {
               
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-[rem]">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -117,7 +117,7 @@ const Tabs = () => {
               
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-[rem]">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -132,7 +132,7 @@ const Tabs = () => {
               
               <div className="w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-[rem]">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Tabs = () => {
               
               <div className="w-auto">
                 <button className="text-sm font-medium border-l border-r px-10 h-10 text-black dark:text-white xl:text-[rem]">
-                Ripple
+                RippleEffect
                 </button>
               </div>
             </div>

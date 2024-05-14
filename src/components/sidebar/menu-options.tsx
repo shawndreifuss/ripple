@@ -110,14 +110,14 @@ console.log(active , "active")
         <div className='flex align-center justify-center w-full mb-4'>
         <Link href="/" >
             <Image
-              src="/assets/dark-logo.jpeg"
+              src="/assets/dark-logo.png"
               alt="logo"
               width={100}
               height={100}
               className="hidden  scale-100 dark:block"
             />
             <Image
-              src="/assets/light-logo.jpeg"
+              src="/assets/light-logo.png"
               alt="logo"
               width={100}
               height={100}

@@ -13,7 +13,7 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: "RIPPLE FEATURES",
+              title: "RIPPLEEFFECT FEATURES",
               subtitle: "Core Features of Ripple",
               
             }}

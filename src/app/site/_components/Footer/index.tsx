@@ -32,14 +32,14 @@ const Footer = () => {
                   <Image
                     width={110}
                     height={80}
-                    src="/assets/light-logo.jpeg"
+                    src="/assets/light-logo.png"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
-                    src="/assets/dark-logo.jpeg"
+                    src="/assets/dark-logo.png"
                     alt="Logo"
                     className="hidden dark:block"
                   />
@@ -47,8 +47,8 @@ const Footer = () => {
 
                 <p className="mb-10 mt-5">
                 Empower Your Agency
-with
-Ripple.
+with the
+RippleEffect.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
